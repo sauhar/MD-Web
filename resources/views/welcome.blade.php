@@ -80,6 +80,7 @@
 								<i class="flaticon-team"></i>
 							</span>
 						</div>
+
 						<div class="feature__content">
 							<h4 class="wow fadeInUp">
 								<a href="features.html">MISSION</a>
