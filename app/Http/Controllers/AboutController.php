@@ -24,6 +24,7 @@ class AboutController extends Controller
     }
     public function msgfrmchm()
     {
+        
         $ourpage = Ourpage::where('id',1)->first();
         $ourpages = Ourpage::all();
 
@@ -55,5 +56,17 @@ class AboutController extends Controller
             'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
         ]);
     }
+    public function lnc()
+    {
+        $ourpage = Ourpage::where('id',5)->first();
+        $ourpages = Ourpage::all();
+
+        return view('about/license-certificate')->with([
+            'ourpage'=>$ourpage,
+            'ourpages'=>$ourpages,
+            'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
+        ]);
+    }
+
      
 }
