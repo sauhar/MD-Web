@@ -471,5 +471,5 @@
 @endsection
 
 @section('title')
-	Index 
+	Index  ehjfioejhgedjgejgijegijg
 @endsection
