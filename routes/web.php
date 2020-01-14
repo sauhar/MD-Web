@@ -35,7 +35,10 @@ Route::prefix('about')->group(function(){
 Route::get('/message-from-chairman','AboutController@msgfrmchm')->name('msg-frm-chairman');
 Route::get('/message-from-managing-director','AboutController@msgfrmmd')->name('msg-frm-md');
 Route::get('/message-from-business-development-director','AboutController@msgfrmbdd')->name('msg-frm-bdd');
+Route::get('/message-from-executive-directors','AboutController@msgfrmexd') ->name('msg-frm-exd');
 Route::get('/license-certificate','AboutController@lnc')->name('license-certif');
+Route::get('/Vekha-Bahadur-Ghimire','AboutController@msgfrmvbg') ->name('msg-frm-VBG');
+Route::get('/Prakash-Sapkota','AboutController@msgprasap') ->name('msg-frm-prasap');
 });
 // Route::get('/', 'HomeController@index')->name('home');
 

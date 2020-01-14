@@ -7,7 +7,7 @@
 					<div class="container">
 						<div class="cr-breadcrumb">
 							<div class="cr-breadcrumb__left">
-								<h2>Message from executive director</h2>
+								<h2>Message from managing director</h2>
 								
 							</div>
 							
@@ -68,7 +68,9 @@
 									<h6>Categories</h6>
 									<ul>
 										@foreach ($ourpages as $ourpage)
+										@if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6)
 											<li><a href="/about/{{ $ourpage->slug }}">{{$ourpage->title}}</a></li>
+											@endif
 										@endforeach
 										{{-- <li><a href="blog-with-right-sidebar.html">Our Licence And Certificate</a></li> --}}
 										{{-- <li><a href="blog-with-right-sidebar.html">list 5</a></li>

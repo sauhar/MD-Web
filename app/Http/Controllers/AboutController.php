@@ -67,6 +67,39 @@ class AboutController extends Controller
             'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
         ]);
     }
+    public function msgfrmexd()
+    {
+        $ourpage = Ourpage::where('id',6)->first();
+        $ourpages = Ourpage::all();
+
+        return view('about/message-from-executive-directors')->with([
+            'ourpage'=>$ourpage,
+            'ourpages'=>$ourpages,
+            'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
+        ]);
+    }
+    public function msgfrmvbg()
+    {
+        $ourpage = Ourpage::where('id',7)->first();
+        $ourpages = Ourpage::all();
+
+        return view('about/Vekha-Bahadur-Ghimire')->with([
+            'ourpage'=>$ourpage,
+            'ourpages'=>$ourpages,
+            'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
+        ]);
+    }
+    public function msgprasap()
+    {
+        $ourpage = Ourpage::where('id',8)->first();
+        $ourpages = Ourpage::all();
+
+        return view('about/Prakash-Sapkota')->with([
+            'ourpage'=>$ourpage,
+            'ourpages'=>$ourpages,
+            'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
+        ]);
+    }
 
      
 }

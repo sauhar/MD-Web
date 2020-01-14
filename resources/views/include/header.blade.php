@@ -150,10 +150,10 @@
 
 
 
-								@if (Auth::guest())
-									{{-- <li><a href="/posts/create">Create Post</a></li> --}}
-									{{-- <li><a href="/login">Login</a></li> --}}
-									{{-- <li><a href="{{ route('register') }}">Register</a></li> --}}
+								{{-- @if (Auth::guest())
+									<li><a href="/posts/create">Create Post</a></li>
+									<li><a href="/login">Login</a></li> 
+									<li><a href="{{ route('register') }}">Register</a></li>
 									
 			
 										@else
@@ -173,7 +173,7 @@
 												</form>
 											</ul>
 										</li>
-								@endif
+								@endif --}}
 
 
 

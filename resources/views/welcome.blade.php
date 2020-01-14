@@ -262,11 +262,11 @@
 							<div class="testimonial__content testimonial-content-slider-active">
 
 								<!-- Testimonial Content Single -->
-								<div class="testimonial__content__single">
+								{{-- <div class="testimonial__content__single">
 									<p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
 										autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
 										porro</p>
-								</div>
+								</div> --}}
 								<!--// Testimonial Content Single -->
 
 								<!-- Testimonial Content Single -->
@@ -286,26 +286,26 @@
 								<!--// Testimonial Content Single -->
 
 								<!-- Testimonial Content Single -->
-								<div class="testimonial__content__single">
+								{{-- <div class="testimonial__content__single">
 									<p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
 										autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
 										porro</p>
-								</div>
+								</div> --}}
 								<!--// Testimonial Content Single -->
 
 								<!-- Testimonial Content Single -->
-								<div class="testimonial__content__single">
+								{{-- <div class="testimonial__content__single">
 									<p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
 										autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
 										porro</p>
-								</div>
+								</div> --}}
 								<!--// Testimonial Content Single -->
 
 								<!-- Testimonial Content Single -->
-								<div class="testimonial__content__single">
+								{{-- <div class="testimonial__content__single">
 									<p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
 										odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro</p>
-								</div>
+								</div> --}}
 								<!--// Testimonial Content Single -->
 
 							</div>
@@ -317,11 +317,11 @@
 								<!-- Single Author -->
 								<div class="testimonial__author__single">
 									<div class="testimonial__author__image">
-										<img src="images/testimonial/testimonial-author-1.png" alt="testimonial author">
+										<img src="images/testimonial/testimonial-author-3.png" alt="testimonial author">
 									</div>
 									<div class="testimonial__author__description">
-										<h6>DAVID MILLER</h6>
-										<span>President</span>
+										<h6>Ishor Shrestha</h6>
+										<span>Chairman</span>
 									</div>
 								</div>
 								<!--// Single Author -->
@@ -329,17 +329,17 @@
 								<!-- Single Author -->
 								<div class="testimonial__author__single">
 									<div class="testimonial__author__image">
-										<img src="images/testimonial/testimonial-author-2.png" alt="testimonial author">
+										<img src="images/testimonial/MD.jpg" alt="testimonial author">
 									</div>
 									<div class="testimonial__author__description">
-										<h6>RAISA MARIYA</h6>
-										<span>CEO</span>
+										<h6>Sait Bahadur Rai</h6>
+										<span>Managing Director</span>
 									</div>
 								</div>
 								<!--// Single Author -->
 
 								<!-- Single Author -->
-								<div class="testimonial__author__single">
+								{{-- <div class="testimonial__author__single">
 									<div class="testimonial__author__image">
 										<img src="images/testimonial/testimonial-author-3.png" alt="testimonial author">
 									</div>
@@ -347,11 +347,11 @@
 										<h6>SHON SMITH</h6>
 										<span>Executive</span>
 									</div>
-								</div>
+								</div> --}}
 								<!--// Single Author -->
 
 								<!-- Single Author -->
-								<div class="testimonial__author__single">
+								{{-- <div class="testimonial__author__single">
 									<div class="testimonial__author__image">
 										<img src="images/testimonial/testimonial-author-1.png" alt="testimonial author">
 									</div>
@@ -359,11 +359,11 @@
 										<h6>DAVID MILLER</h6>
 										<span>President</span>
 									</div>
-								</div>
+								</div> --}}
 								<!--// Single Author -->
 
 								<!-- Single Author -->
-								<div class="testimonial__author__single">
+								{{-- <div class="testimonial__author__single">
 									<div class="testimonial__author__image">
 										<img src="images/testimonial/testimonial-author-2.png" alt="testimonial author">
 									</div>
@@ -371,11 +371,11 @@
 										<h6>RAISA MARIYA</h6>
 										<span>CEO</span>
 									</div>
-								</div>
+								</div> --}}
 								<!--// Single Author -->
 
 								<!-- Single Author -->
-								<div class="testimonial__author__single">
+								{{-- <div class="testimonial__author__single">
 									<div class="testimonial__author__image">
 										<img src="images/testimonial/testimonial-author-3.png" alt="testimonial author">
 									</div>
@@ -383,7 +383,7 @@
 										<h6>SHON SMITH</h6>
 										<span>Executive</span>
 									</div>
-								</div>
+								</div> --}}
 								<!--// Single Author -->
 
 							</div>

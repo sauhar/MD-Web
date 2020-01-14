@@ -154,7 +154,8 @@
 							<section class="single-widget widget-categories">
 									<h6>Categories</h6>
 									<ul>
-										@foreach ($ourpages as $ourpage)
+                                        @foreach ($ourpages as $ourpage)
+                                        
 											<li><a href="/about/{{ $ourpage->slug }}">{{$ourpage->title}}</a></li>
 										@endforeach
 										{{-- <li><a href="blog-with-right-sidebar.html">Our Licence And Certificate</a></li> --}}
