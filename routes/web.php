@@ -23,7 +23,7 @@ Route::get('/about', 'AboutController@post')->name('about');
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::get('/services', 'PagesController@services')->name('services');
 Route::get('/post', 'PostsController@post')->name('post');
-Route::get('/pages/about-company', 'PostsController@abtcmpy')->name('about-company');
+
 
 Route::prefix('services')->group(function(){
 Route::get('/overseas-recruitment', 'PostsController@ovrrec')->name('overseas-recru');
@@ -33,6 +33,7 @@ Route::get('/travel-management', 'PostsController@tramgnt')->name('trav-mgmt');
 });
 
 Route::prefix('about')->group(function(){
+Route::get('/about-company', 'AboutController@abtcmpy')->name('about-company');
 Route::get('/message-from-chairman','AboutController@msgfrmchm')->name('msg-frm-chairman');
 Route::get('/message-from-managing-director','AboutController@msgfrmmd')->name('msg-frm-md');
 Route::get('/message-from-business-development-director','AboutController@msgfrmbdd')->name('msg-frm-bdd');

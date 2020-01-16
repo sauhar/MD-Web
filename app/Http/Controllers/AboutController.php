@@ -22,11 +22,26 @@ class AboutController extends Controller
         ]);
 
     }
+
+    public function abtcmpy()
+    {
+        $ourpage = Ourpage::where('id',9)->first();
+        $ourpages = Ourpage::all()->take(5);
+       
+
+        return view('about/about-company')->with([
+            'ourpage'=>$ourpage,
+            'ourpages'=>$ourpages,
+            'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
+        ]);
+    }
+     
+
     public function msgfrmchm()
     {
         
         $ourpage = Ourpage::where('id',1)->first();
-        $ourpages = Ourpage::all()->take(6);
+        $ourpages = Ourpage::all()->take(5);
 
         return view('about/message-from-chairman')->with([
             'ourpage'=>$ourpage,
@@ -37,7 +52,7 @@ class AboutController extends Controller
     public function msgfrmmd()
     {
         $ourpage = Ourpage::where('id',2)->first();
-        $ourpages = Ourpage::all()->take(6);
+        $ourpages = Ourpage::all()->take(5);
 
         return view('about/message-from-managing-director')->with([
             'ourpage'=>$ourpage,
@@ -48,7 +63,7 @@ class AboutController extends Controller
     public function msgfrmbdd()
     {
         $ourpage = Ourpage::where('id',3)->first();
-        $ourpages = Ourpage::all()->take(6);
+        $ourpages = Ourpage::all()->take(5);
 
         return view('about/message-from-business-development-director')->with([
             'ourpage'=>$ourpage,
@@ -69,8 +84,8 @@ class AboutController extends Controller
     }
     public function msgfrmexd()
     {
-        $ourpage = Ourpage::where('id',6)->first();
-        $ourpages = Ourpage::all()->take(6);
+        $ourpage = Ourpage::where('id',4)->first();
+        $ourpages = Ourpage::all()->take(5);
 
         return view('about/message-from-executive-directors')->with([
             'ourpage'=>$ourpage,
@@ -81,7 +96,7 @@ class AboutController extends Controller
     public function msgfrmvbg()
     {
         $ourpage = Ourpage::where('id',7)->first();
-        $ourpages = Ourpage::all()->take(6);
+        $ourpages = Ourpage::all()->take(5);
 
         return view('about/Vekha-Bahadur-Ghimire')->with([
             'ourpage'=>$ourpage,
@@ -92,7 +107,7 @@ class AboutController extends Controller
     public function msgprasap()
     {
         $ourpage = Ourpage::where('id',8)->first();
-        $ourpages = Ourpage::all()->take(6);
+        $ourpages = Ourpage::all()->take(5);
        
 
         return view('about/Prakash-Sapkota')->with([
@@ -101,6 +116,5 @@ class AboutController extends Controller
             'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
         ]);
     }
-
-     
+   
 }

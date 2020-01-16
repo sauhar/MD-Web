@@ -5,32 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\MenuItem;
+use App\Ourpage;
 
 class PostsController extends Controller
 {
-    // public function post()
-    // {
-
-        
-    //     $posts = Post::where('id',5)->get();
-
-    //     return view('about')->with([
-    //         'posts'=>$posts,
-    //         'menus'=>\App\MenuItem::where('menu_id',2)->get(),
-    //     ]);
-
-    // }
-    public function abtcmpy()
-    {
-        $post = Post::where('id',5)->first();
-        $posts = Post::all();
-
-        return view('pages/about-company')->with([
-            'post'=>$post,
-            'posts'=>$posts,
-            'menus'=>\App\MenuItem::where('menu_id',2)->get(),
-        ]);
-    }
     public function ovrrec()
     {
         $post = Post::where('id',8)->first();
