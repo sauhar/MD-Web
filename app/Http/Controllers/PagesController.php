@@ -16,4 +16,11 @@ class PagesController extends Controller
             'menus'=>$menus
         ]);;
     }
+    public function services(){
+        $menus = MenuItem::where('menu_id',2)->orderBy('order')->get();
+
+        return view('services')->with([
+            'menus'=>$menus
+        ]);;
+    }
 }

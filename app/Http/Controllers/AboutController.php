@@ -26,7 +26,7 @@ class AboutController extends Controller
     {
         
         $ourpage = Ourpage::where('id',1)->first();
-        $ourpages = Ourpage::all();
+        $ourpages = Ourpage::all()->take(6);
 
         return view('about/message-from-chairman')->with([
             'ourpage'=>$ourpage,
@@ -37,7 +37,7 @@ class AboutController extends Controller
     public function msgfrmmd()
     {
         $ourpage = Ourpage::where('id',2)->first();
-        $ourpages = Ourpage::all();
+        $ourpages = Ourpage::all()->take(6);
 
         return view('about/message-from-managing-director')->with([
             'ourpage'=>$ourpage,
@@ -48,7 +48,7 @@ class AboutController extends Controller
     public function msgfrmbdd()
     {
         $ourpage = Ourpage::where('id',3)->first();
-        $ourpages = Ourpage::all();
+        $ourpages = Ourpage::all()->take(6);
 
         return view('about/message-from-business-development-director')->with([
             'ourpage'=>$ourpage,
@@ -59,7 +59,7 @@ class AboutController extends Controller
     public function lnc()
     {
         $ourpage = Ourpage::where('id',5)->first();
-        $ourpages = Ourpage::all();
+        $ourpages = Ourpage::all()->take(6);
 
         return view('about/license-certificate')->with([
             'ourpage'=>$ourpage,
@@ -70,7 +70,7 @@ class AboutController extends Controller
     public function msgfrmexd()
     {
         $ourpage = Ourpage::where('id',6)->first();
-        $ourpages = Ourpage::all();
+        $ourpages = Ourpage::all()->take(6);
 
         return view('about/message-from-executive-directors')->with([
             'ourpage'=>$ourpage,
@@ -81,7 +81,7 @@ class AboutController extends Controller
     public function msgfrmvbg()
     {
         $ourpage = Ourpage::where('id',7)->first();
-        $ourpages = Ourpage::all();
+        $ourpages = Ourpage::all()->take(6);
 
         return view('about/Vekha-Bahadur-Ghimire')->with([
             'ourpage'=>$ourpage,
@@ -92,7 +92,8 @@ class AboutController extends Controller
     public function msgprasap()
     {
         $ourpage = Ourpage::where('id',8)->first();
-        $ourpages = Ourpage::all();
+        $ourpages = Ourpage::all()->take(6);
+       
 
         return view('about/Prakash-Sapkota')->with([
             'ourpage'=>$ourpage,

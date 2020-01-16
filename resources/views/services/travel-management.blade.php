@@ -7,7 +7,7 @@
 					<div class="container">
 						<div class="cr-breadcrumb">
 							<div class="cr-breadcrumb__left">
-								<h2>About Us</h2>
+								<h2>Travel And Management</h2>
 								
 							</div>
 							
@@ -50,37 +50,35 @@
 				<div class="row">
 					<div class="col-lg-8">
 					<div class="widgets sidebar-widgets">
-
 						<section class="single-widget widget-categories">
 
-                            <h6>{{ $post->title }}</h6>
+							<h6>{{ $post->title }}</h6>
 							{!! $post->body !!}
 							<img src="{{ Voyager::image($post->image) }}" alt="">
+						
 
-							
-							
+					</section>
+				</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="widgets sidebar-widgets">
 
-						</section>
-					</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="widgets sidebar-widgets">
-
-							<section class="single-widget widget-categories">
-									<h6>Categories</h6>
-									<ul>
-										@foreach ($posts as $post)
-										@if($post->id==5)
-											<li><a href="/{{$post->slug}}">{{$post->title}}</a></li>
-											@else
+						<section class="single-widget widget-categories">
+								<h6>Categories</h6>
+								<ul>
+									@foreach ($posts as $post)
+										{{-- @if($post->id==5)
+										   <li><a href="/{{$post->slug}}">{{$post->title}}</a></li>
+											@endif --}}
+											@if($post->id==6 || $post->id==7 || $post->id==8)
 
 											<li><a href="/services/{{ $post->slug }}">{{$post->title}}</a></li>
 											@endif
 										@endforeach
-										{{-- <li><a href="blog-with-right-sidebar.html">list 5</a></li>
-										<li><a href="blog-with-right-sidebar.html">list 6</a></li> --}}
-									</ul>
-							</section>
+									{{-- <li><a href="blog-with-right-sidebar.html">list 5</a></li>
+									<li><a href="blog-with-right-sidebar.html">list 6</a></li> --}}
+								</ul>
+						</section>
 						</div>
 					</div>
 				</div>

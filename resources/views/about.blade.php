@@ -67,11 +67,11 @@
 							</div>
 							<div class="service__content">
 								<h5>
-									<a href="/services/area-of-expert">AREA OF EXPERTISE</a>
+									<a href="/services/overseas-recruitment">Overseas Recruitment</a>
 								</h5>
-								<p>Our Consultants are dedicated to their own sectors and have access to a unique overview.</p> 
+								<p>Mahad Manpower is a professional HR management organization in Nepal, </p> 
 								{{-- <p>Our sourcing professionals have extensive backgrounds and proficiency in a varied scope of global industries.</p> --}}
-								<a href="services/area-of-expert" class="cr-btn">
+								<a href="services/overseas-recruitment" class="cr-btn">
 									<span>Read More</span>
 								</a>
 								
@@ -90,10 +90,10 @@
 							</div>
 							<div class="service__content">
 								<h5>
-									<a href="/services/core-services">CORE SERVICES</a>
+									<a href="/services/training-and-orientation">Training and Orientation</a>
 								</h5>
-								<p>Our Consultants provides their own best core services on your needs </p>
-								<a href="services/core-services" class="cr-btn">
+								<p>We have managed the training as per the requirement of the particular candidate no matter </p>
+								<a href="services/training-and-orientation" class="cr-btn">
 									<span>Read More</span>
 								</a>
 							</div>
@@ -109,67 +109,33 @@
 							</div>
 							<div class="service__content">
 								<h5>
-									<a href="services/other-services">OTHER SERVICES</a>
+									<a href="services/travel-management">Travel Management</a>
 								</h5>
-								<p>Our Consultant provides the other services along with the core and the expertise</p>
-								<a href="services/other-services" class="cr-btn">
+								<p>Once Contract signing with the employee is done, travel arrangement becomes the final </p>
+								<a href="services/travel-management" class="cr-btn">
 									<span>Read More</span>
 								</a>
 							</div>
 						</div>
 					</div>
-					<!--// Single Service -->
-
-					<!-- Single Service -->
-					<!-- <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-						<div class="service">
-							<div class="service__icon">
-								<i class="flaticon-creative"></i>
-							</div>
-							<div class="service__content">
-								<h5>
-									<a href="single-service.html">CAR INSURANCE</a>
-								</h5>
-								<p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam rem per </p>
-							</div>
-						</div>
-					</div> -->
-					<!--// Single Service -->
-
-					<!-- Single Service -->
-					<!-- <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-						<div class="service">
-							<div class="service__icon">
-								<i class="flaticon-hand-shake"></i>
-							</div>
-							<div class="service__content">
-								<h5>
-									<a href="single-service.html">BUSINESS INSURANCE</a>
-								</h5>
-								<p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam rem per </p>
-							</div>
-						</div>
-					</div> -->
-					<!--// Single Service -->
-
-					<!-- Single Service -->
-					<!-- <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-						<div class="service">
-							<div class="service__icon">
-								<i class="flaticon-risk"></i>
-							</div>
-							<div class="service__content">
-								<h5>
-									<a href="single-service.html">INVESMENT PLANING</a>
-								</h5>
-								<p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam rem per </p>
-							</div>
-						</div>
-					</div> -->
-					<!--// Single Service -->
-
+				
 				</div>
 			</div>
+			
+	
+
+		</section> 
+
+
+
+
+
+
+
+
+
+
+		<!-- Portfolio Area -->
 			<section id="team-area" class="advisor-area bg--white section-padding--xlg">
 				<div class="container">
 					<div class="row">

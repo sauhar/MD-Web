@@ -21,13 +21,14 @@ Route::get('/', 'HomeController@wlcome')->name('welcome');
 Auth::routes();
 Route::get('/about', 'AboutController@post')->name('about');
 Route::get('/contact', 'PagesController@contact')->name('contact');
+Route::get('/services', 'PagesController@services')->name('services');
 Route::get('/post', 'PostsController@post')->name('post');
 Route::get('/pages/about-company', 'PostsController@abtcmpy')->name('about-company');
 
 Route::prefix('services')->group(function(){
-Route::get('/area-of-expert', 'PostsController@areaofexp')->name('area-of-expert');
-Route::get('/core-services', 'PostsController@coreser')->name('core-services');
-Route::get('/other-services', 'PostsController@otserv')->name('other-services');
+Route::get('/overseas-recruitment', 'PostsController@ovrrec')->name('overseas-recru');
+Route::get('/training-and-orientation', 'PostsController@tno')->name('tarin-ori');
+Route::get('/travel-management', 'PostsController@tramgnt')->name('trav-mgmt');
 
 });
 

@@ -31,30 +31,30 @@ class PostsController extends Controller
             'menus'=>\App\MenuItem::where('menu_id',2)->get(),
         ]);
     }
-    public function areaofexp()
+    public function ovrrec()
     {
-        $post = Post::where('id',6)->first();
+        $post = Post::where('id',8)->first();
         $posts = Post::all();
-        return view('services/area-of-expert')->with([
+        return view('services/overseas-recruitment')->with([
             'post'=>$post,
             'posts'=>$posts,
             'menus'=>\App\MenuItem::where('menu_id',2)->get(),
         ]);
     }
-    public function coreser(){
+    public function tno(){
         $post= Post::where('id',7)->first();
         $posts=Post::all();
-        return view('services/core-services')->with([
+        return view('services/training-and-orientation')->with([
             'post'=>$post,
             'posts'=>$posts,
             'menus'=>\App\MenuItem::where('menu_id',2)->get(),
            
         ]);
     }
-    public function otserv(){
-        $post=Post::where('id',8)->first();
+    public function tramgnt(){
+        $post=Post::where('id',6)->first();
         $posts=Post::all();
-        return view('services/other-services')->with([
+        return view('services/travel-management')->with([
             'post'=>$post,
             'posts'=>$posts,
             'menus'=>\App\MenuItem::where('menu_id',2)->get(),

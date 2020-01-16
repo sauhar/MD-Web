@@ -67,10 +67,16 @@
 							<section class="single-widget widget-categories">
 									<h6>Categories</h6>
 									<ul>
+										{{-- @php $count = 1; @endphp --}}
 										@foreach ($ourpages as $ourpage)
-										@if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6)
+											{{-- @if($count<=6) --}}
+										
 											<li><a href="/about/{{ $ourpage->slug }}">{{$ourpage->title}}</a></li>
-											@endif
+											
+											{{-- @endif --}}
+
+											{{-- @php $count++; @endphp --}}
+
 										@endforeach
 										{{-- <li><a href="blog-with-right-sidebar.html">Our Licence And Certificate</a></li> --}}
 										{{-- <li><a href="blog-with-right-sidebar.html">list 5</a></li>
