@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2020 at 07:10 AM
+-- Generation Time: Jan 22, 2020 at 11:13 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -155,7 +155,18 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (65, 9, 'slug', 'text', 'Slug', 0, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\"},\"validation\":{\"rule\":\"unique:pages,slug\"}}', 5),
 (66, 9, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 1, 0, 1, '{}', 6),
 (67, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
-(68, 9, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 4);
+(68, 9, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 4),
+(69, 11, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(70, 11, 'name', 'text', 'Name', 0, 1, 1, 1, 1, 1, '{}', 2),
+(71, 11, 'photo', 'image', 'Photo', 0, 1, 1, 1, 1, 1, '{}', 3),
+(72, 11, 'message', 'rich_text_box', 'Message', 0, 1, 1, 1, 1, 1, '{}', 4),
+(73, 11, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 5),
+(74, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 6),
+(75, 13, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(76, 13, 'photo', 'image', 'Photo', 0, 1, 1, 1, 1, 1, '{}', 3),
+(77, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
+(78, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
+(79, 13, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 2);
 
 -- --------------------------------------------------------
 
@@ -194,7 +205,32 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2019-12-25 01:40:34', '2019-12-25 01:40:34'),
 (8, 'items', 'items', 'Item', 'Items', 'voyager-watch', 'App\\Item', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2019-12-26 02:40:31', '2019-12-26 02:40:31'),
 (9, 'ourpages', 'ourpages', 'Ourpage', 'Ourpages', NULL, 'App\\Ourpage', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2019-12-27 05:05:28', '2019-12-27 05:05:28'),
-(10, 'contact', 'contact', 'Contact', 'Contacts', NULL, 'App\\Contact', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-01-11 23:26:27', '2020-01-11 23:26:27');
+(10, 'contact', 'contact', 'Contact', 'Contacts', NULL, 'App\\Contact', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
+(11, 'executive_directors', 'executive-directors', 'Executive Director', 'Executive Directors', 'voyager-pie-chart', 'App\\ExecutiveDirector', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-01-21 04:46:43', '2020-01-21 05:21:52'),
+(13, 'license_certificates', 'license-certificates', 'License Certificate', 'License Certificates', 'voyager-pie-chart', 'App\\LicenseCertificate', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-01-21 23:12:54', '2020-01-21 23:26:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `executive_directors`
+--
+
+CREATE TABLE `executive_directors` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `executive_directors`
+--
+
+INSERT INTO `executive_directors` (`id`, `name`, `photo`, `message`, `created_at`, `updated_at`) VALUES
+(1, 'Vekha Bahadur Ghimire', 'executive-directors\\January2020\\kIVBNTvUe86wVFX8Xqit.png', '<p style=\"text-align: justify;\">I am grateful for your deep interest and time you spent in getting to know about Mahad Manpower Pvt. Ltd. I welcome you to Mahad Manpower Pvt. Ltd. which will guarantee you experience and facility like never before with world class recruitment services with emphasis on quality, understanding and careful analysis into each candidate&rsquo;s adaptability to bring about our satisfaction. The best thing about Mahad Manpower Pvt. Ltd. is that you have the advantage of securing your corporate goals through utilization of its resource base, professionals, and strategic alliances we have formed partners from all around the world. Evermore concerned on working on behalf of you, we assure, you&rsquo;ll find our services unbeatable and second to none.</p>\r\n<p style=\"text-align: justify;\"><strong>Vekha Bahadur Ghimire</strong></p>\r\n<p style=\"text-align: justify;\">Executive Director</p>\r\n<p style=\"text-align: justify;\">+977 9851055194, +60 126677914</p>', '2020-01-21 04:48:00', '2020-01-22 00:50:34'),
+(2, 'Prakash Sapkota', 'executive-directors\\January2020\\cBKP77hNYhsNBlyHC0HG.jpg', '<p style=\"text-align: justify;\">Would like to present my sincere gratitude for considering us a mong mushrooming numbers of outsourcing agencies. Nepal, a south Asian country with so many undiscovered possibilities has been one of the prospective country for which Mahad Manpower Pvt. Ltd. market has always relied on for the hardworking manpower. Along, we trained them furthermore for the same. This is the reason why we have a strong compilation of the human resources bounded with us. And, I am sure that this would be the far most quality that our clients seek too. It would be a wonderful experience and magnanimous opportunity for us to carry the business relationship with you in a near future. Thanking you all with kindest Regards,</p>\r\n<p style=\"text-align: justify;\"><strong>Prakash Sapkota</strong></p>\r\n<p style=\"text-align: justify;\">Executive Director</p>\r\n<p style=\"text-align: justify;\">+977 9851051553</p>', '2020-01-21 05:04:00', '2020-01-22 00:49:30');
 
 -- --------------------------------------------------------
 
@@ -232,6 +268,29 @@ CREATE TABLE `items` (
 
 INSERT INTO `items` (`id`, `created_at`, `updated_at`, `name`, `description`, `slug`) VALUES
 (1, '2019-12-26 02:41:24', '2019-12-26 02:41:24', 'Area of expertise', 'HELOE', 'area-of-expertise');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `license_certificates`
+--
+
+CREATE TABLE `license_certificates` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `license_certificates`
+--
+
+INSERT INTO `license_certificates` (`id`, `photo`, `created_at`, `updated_at`, `title`) VALUES
+(1, 'license-certificates\\January2020\\0em3oK703nScQNHGgyXJ.jpg', '2020-01-21 23:14:00', '2020-01-21 23:27:03', 'License'),
+(2, 'license-certificates\\January2020\\cpdHkmuS26Kh2PNh8HgY.jpg', '2020-01-21 23:30:42', '2020-01-21 23:30:42', 'PAN'),
+(3, 'license-certificates\\January2020\\2zXxt7vQgIz9bWrJ3WIU.jpg', '2020-01-21 23:31:12', '2020-01-21 23:31:12', 'OCR');
 
 -- --------------------------------------------------------
 
@@ -296,22 +355,31 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (13, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 7, '2019-12-25 01:40:35', '2019-12-25 01:40:35', 'voyager.pages.index', NULL),
 (14, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 13, '2019-12-25 01:40:38', '2019-12-25 01:40:38', 'voyager.hooks', NULL),
 (15, 2, 'Home', '/', '_self', NULL, '#000000', NULL, 1, '2019-12-25 02:11:40', '2019-12-25 02:14:06', NULL, ''),
-(16, 2, 'About', '/about', '_self', NULL, '#000000', NULL, 2, '2019-12-25 02:12:15', '2019-12-25 02:14:06', NULL, ''),
-(17, 2, 'Services', '', '_self', NULL, '#000000', NULL, 3, '2019-12-25 02:12:31', '2020-01-09 01:45:49', NULL, ''),
-(18, 2, 'Procedures', '', '_self', NULL, '#000000', NULL, 4, '2019-12-25 02:12:41', '2020-01-09 01:45:49', NULL, ''),
-(19, 2, 'Contact', '/contact', '_self', NULL, '#000000', NULL, 5, '2019-12-25 02:12:47', '2020-01-09 01:45:49', NULL, ''),
-(20, 2, 'About Company', '/pages/about-company', '_self', NULL, '#000000', 16, 1, '2019-12-25 02:12:56', '2019-12-25 23:22:52', NULL, ''),
-(21, 2, 'Message From Chairman', '/about/message-from-chairman', '_self', NULL, '#000000', 16, 2, '2019-12-25 02:13:03', '2019-12-27 05:19:56', NULL, ''),
-(22, 2, 'Message From Executive Director', '', '_self', NULL, '#000000', 16, 5, '2019-12-25 02:13:20', '2019-12-27 00:04:06', NULL, ''),
-(24, 2, 'Message From Business Development Director', '/about/message-from-business-development-director', '_self', NULL, '#000000', 16, 4, '2019-12-25 02:14:01', '2019-12-29 23:27:18', NULL, ''),
+(16, 2, 'About', '#', '_self', NULL, '#000000', NULL, 2, '2019-12-25 02:12:15', '2020-01-20 23:05:07', NULL, ''),
+(17, 2, 'Services', '#', '_self', NULL, '#000000', NULL, 3, '2019-12-25 02:12:31', '2020-01-20 23:05:29', NULL, ''),
+(18, 2, 'Procedures', '#', '_self', NULL, '#000000', NULL, 4, '2019-12-25 02:12:41', '2020-01-20 23:05:38', NULL, ''),
+(19, 2, 'Contact', '/contact', '_self', NULL, '#000000', NULL, 6, '2019-12-25 02:12:47', '2020-01-21 02:35:48', NULL, ''),
+(20, 2, 'About Company', 'about-company', '_self', NULL, '#000000', 16, 1, '2019-12-25 02:12:56', '2020-01-21 01:28:02', NULL, ''),
+(21, 2, 'Message From Chairman', 'message-from-chairman', '_self', NULL, '#000000', 16, 2, '2019-12-25 02:13:03', '2019-12-27 05:19:56', NULL, ''),
+(22, 2, 'Message From Executive Directors', 'message-from-executive-directors', '_self', NULL, '#000000', 16, 5, '2019-12-25 02:13:20', '2020-01-14 02:15:43', NULL, ''),
+(24, 2, 'Message From Business Development Director', 'message-from-business-development-director', '_self', NULL, '#000000', 16, 4, '2019-12-25 02:14:01', '2019-12-29 23:27:18', NULL, ''),
 (25, 1, 'Items', '', '_self', 'voyager-watch', NULL, NULL, 15, '2019-12-26 02:40:32', '2019-12-26 02:40:32', 'voyager.items.index', NULL),
-(26, 2, 'Message From Managing Director', '/about/message-from-managing-director', '_self', NULL, '#000000', 16, 3, '2019-12-27 00:03:57', '2019-12-29 23:06:04', NULL, ''),
+(26, 2, 'Message From Managing Director', 'message-from-managing-director', '_self', NULL, '#000000', 16, 3, '2019-12-27 00:03:57', '2019-12-29 23:06:04', NULL, ''),
 (27, 1, 'Ourpages', '', '_self', NULL, NULL, NULL, 16, '2019-12-27 05:05:29', '2019-12-27 05:05:29', 'voyager.ourpages.index', NULL),
-(28, 2, 'Message From Vekha Bahadur Ghimire', '/about/message-from-vekha-bahadur-ghimire', '_self', NULL, '#000000', 22, 1, '2019-12-30 00:29:18', '2019-12-30 00:32:00', NULL, ''),
-(29, 2, 'Message From Prakash Sapkota', '', '_self', NULL, '#000000', 22, 2, '2019-12-30 00:29:58', '2019-12-30 00:30:06', NULL, ''),
-(30, 2, 'Required Documents', '/procedures/required-documents', '_self', NULL, '#000000', 18, 1, '2020-01-07 23:06:54', '2020-01-08 02:31:58', NULL, ''),
-(31, 2, 'Recruitment', '/procedures/recruitment', '_self', NULL, '#000000', 18, 2, '2020-01-08 00:08:38', '2020-01-08 00:08:57', NULL, ''),
-(33, 1, 'Contacts', '', '_self', NULL, NULL, NULL, 17, '2020-01-11 23:26:27', '2020-01-11 23:26:27', 'voyager.contact.index', NULL);
+(30, 2, 'Required Documents', 'required-documents', '_self', NULL, '#000000', 18, 2, '2020-01-07 23:06:54', '2020-01-21 04:19:41', NULL, ''),
+(31, 2, 'Recruitment', 'recruitment', '_self', NULL, '#000000', 18, 1, '2020-01-08 00:08:38', '2020-01-21 04:19:41', NULL, ''),
+(33, 1, 'Contacts', '', '_self', NULL, NULL, NULL, 17, '2020-01-11 23:26:27', '2020-01-11 23:26:27', 'voyager.contact.index', NULL),
+(34, 2, 'License & Certificate', 'license-certificate', '_self', NULL, '#000000', 16, 6, '2020-01-14 00:41:55', '2020-01-22 03:54:04', NULL, ''),
+(35, 2, 'Overseas Recruitment', 'overseas-recruitment', '_self', NULL, '#000000', 17, 1, '2020-01-15 23:39:01', '2020-01-21 02:50:42', NULL, ''),
+(36, 2, 'Training & Orientation', 'training-and-orientation', '_self', NULL, '#000000', 17, 2, '2020-01-15 23:39:49', '2020-01-22 03:52:58', NULL, ''),
+(37, 2, 'Travel Management', 'travel-management', '_self', NULL, '#000000', 17, 3, '2020-01-15 23:40:21', '2020-01-21 02:50:42', NULL, ''),
+(38, 2, 'Global Clients', '#', '_self', NULL, '#000000', NULL, 5, '2020-01-18 23:52:36', '2020-01-20 23:05:48', NULL, ''),
+(39, 2, 'Qatar', 'qatar', '_self', NULL, '#000000', 38, 2, '2020-01-18 23:53:47', '2020-01-21 02:06:20', NULL, ''),
+(40, 2, 'UAE', 'UAE', '_self', NULL, '#000000', 38, 1, '2020-01-18 23:53:55', '2020-01-21 02:06:13', NULL, ''),
+(41, 2, 'Saudi-Arabia', 'saudi-arabia', '_self', NULL, '#000000', 38, 4, '2020-01-18 23:54:15', '2020-01-21 02:06:33', NULL, ''),
+(42, 2, 'Malaysia', 'malaysia', '_self', NULL, '#000000', 38, 3, '2020-01-18 23:54:31', '2020-01-21 02:06:27', NULL, ''),
+(44, 1, 'Executive Directors', '', '_self', 'voyager-pie-chart', NULL, NULL, 18, '2020-01-21 04:46:43', '2020-01-21 04:46:43', 'voyager.executive-directors.index', NULL),
+(46, 1, 'License Certificates', '', '_self', 'voyager-pie-chart', NULL, NULL, 19, '2020-01-21 23:12:54', '2020-01-21 23:12:54', 'voyager.license-certificates.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -384,10 +452,23 @@ CREATE TABLE `ourpages` (
 --
 
 INSERT INTO `ourpages` (`id`, `body`, `image`, `slug`, `created_at`, `updated_at`, `title`) VALUES
-(1, '<p>It is my privilege to introduce Mahad Manpower Pvt. Ltd. Established in the year 2002 A.D. as a leading human resources Manpower of Nepal with a faith in people&rsquo;s heart. Also, I am delighted to have a positive response from valuable clients and appreciation from the candidates.</p>\r\n<p>Mahad Manpower Pvt. Ltd. works with the objective of providing quality human resources to the companies located abroad. At the same time, we are doing our best to minimize the unemployment crisis in the country and to add the foreign currency to the national treasury.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is proficient and experienced in supplying enthusiastic, reliable and energetic workforce-professionals, skilled and semi skilled etc all around the world. Our vision is to be a quality conscious company assuring better performance of the workers having sincerity, honesty, loyalty and hardworking ability. Since more than a decade.&nbsp;</p>\r\n<p>Last but not the least, I grab this opportunity to thank all those esteemed and prestigious clients who have trusted Mahad Manpower Pvt. Ltd. to supply them with quality manpower. With all those well wishers, Mahad Manpower Pvt. Ltd. has been able to hold a leading position today in Nepal and abroad.</p>\r\n<p>I assure same ahead in the future too.</p>\r\n<p>Thanking you all with kindest Regards,</p>\r\n<p><strong>Ishor Shrestha</strong></p>\r\n<p>Chairman</p>\r\n<p>+977 9851032179</p>', 'ourpages\\December2019\\9Rhb4a9poz45FGhtps4S.jpg', 'message-from-chairman', '2019-12-27 05:15:00', '2019-12-29 22:56:43', 'Message From Chairman'),
-(2, '<p>We take pleasure in introducing ourselves as an emerging and trust worthy Manpower licensed by the Labor Ministry Government of Nepal. We have proven record of extensive experience in meeting the manpower requirements of the Middle East.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is proficient and experienced in supplying enthusiastic, reliable and energetic workforce-professionals, skilled and semi skilled etc all around the world. Our vision is to be a quality conscious company assuring better performance of the workers having sincerity, honesty, loyalty and hardworking ability. since more than a decade, I always consider the fact that the human potentiality should be utilized to the maximum extent for the betterment of the world. Hence, our priority is always to bridge up the and the human resources. In short, we undertake the responsibility to provide the right man for the job.</p>\r\n<p><strong>Sait Bahadur Rai</strong></p>\r\n<p>Managing Director</p>\r\n<p>+977 9851069298</p>', NULL, 'message-from-managing-director', '2019-12-29 22:56:00', '2019-12-29 23:03:10', 'Message From Managing director'),
-(3, '<p>I&rsquo;d like to convey you my personal regards and welcome you to witness the potentials and value of choosing to work with us as your manpower recruitment partner.&nbsp;</p>\r\n<p>I welcome you to Mahad Manpower Pvt. Ltd. which will guarantee you experience and facility like never before with world class recruitment services with emphasis on quality, understanding and careful analysis into each candidate&rsquo;s adaptability to bring about our satisfaction.</p>\r\n<p>The best thing about Mahad Manpower Pvt. Ltd. is that you have the advantage of securing your corporate goals through utilization of its resource base, professionals, and strategic alliances we have formed partners from all around the world. Evermore concerned on working on behalf of you, we assure, you&rsquo;ll find our services unbeatable and second to none.</p>\r\n<p><strong>Mariyanti T Jhin </strong></p>\r\n<p>Business Development Director</p>\r\n<p>+017 400 7933</p>', NULL, 'message-from-business-development-director', '2019-12-29 23:22:43', '2019-12-29 23:22:43', 'Message From Business Development Director'),
-(4, '<p>I am grateful for your deep interest and time you spent in getting to know about Mahad Manpower Pvt. Ltd.</p>\r\n<p>I welcome you to Mahad Manpower Pvt. Ltd. which will guarantee you experience and facility like never before with world class recruitment services with emphasis on quality, understanding and careful analysis into each candidate&rsquo;s adaptability to bring about our satisfaction.</p>\r\n<p>The best thing about Mahad Manpower Pvt. Ltd. is that you have the advantage of securing your corporate goals through utilization of its resource base, professionals, and strategic alliances we have formed partners from all around the world. Evermore concerned on working on behalf of you, we assure, you&rsquo;ll find our services unbeatable and second to none.</p>\r\n<p><strong>Vekha Bahadur Ghimire</strong></p>\r\n<p>Executive Director</p>\r\n<p>+977 9851055194, +60 126677914</p>', NULL, 'message-from-executive-director', '2019-12-30 00:26:30', '2019-12-30 00:26:30', 'Message From Executive Director');
+(1, '<p>It is my privilege to introduce Mahad Manpower Pvt. Ltd. Established in the year 2002 A.D. as a leading human resources Manpower of Nepal with a faith in people&rsquo;s heart. Also, I am delighted to have a positive response from valuable clients and appreciation from the candidates.</p>\r\n<p>Mahad Manpower Pvt. Ltd. works with the objective of providing quality human resources to the companies located abroad. At the same time, we are doing our best to minimize the unemployment crisis in the country and to add the foreign currency to the national treasury.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is proficient and experienced in supplying enthusiastic, reliable and energetic workforce-professionals, skilled and semi skilled etc all around the world. Our vision is to be a quality conscious company assuring better performance of the workers having sincerity, honesty, loyalty and hardworking ability. Since more than a decade.&nbsp;</p>\r\n<p>Last but not the least, I grab this opportunity to thank all those esteemed and prestigious clients who have trusted Mahad Manpower Pvt. Ltd. to supply them with quality manpower. With all those well wishers, Mahad Manpower Pvt. Ltd. has been able to hold a leading position today in Nepal and abroad.</p>\r\n<p>I assure same ahead in the future too.</p>\r\n<p>Thanking you all with kindest Regards,</p>\r\n<p><strong>Ishor Shrestha</strong></p>\r\n<p>Chairman</p>\r\n<p>+977 9851032179</p>', NULL, 'message-from-chairman', '2019-12-27 05:15:00', '2020-01-22 01:36:12', 'Message From Chairman'),
+(2, '<p>We take pleasure in introducing ourselves as an emerging and trust worthy Manpower licensed by the Labor Ministry Government of Nepal. We have proven record of extensive experience in meeting the manpower requirements of the Middle East.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is proficient and experienced in supplying enthusiastic, reliable and energetic workforce-professionals, skilled and semi skilled etc all around the world. Our vision is to be a quality conscious company assuring better performance of the workers having sincerity, honesty, loyalty and hardworking ability. since more than a decade, I always consider the fact that the human potentiality should be utilized to the maximum extent for the betterment of the world. Hence, our priority is always to bridge up the and the human resources. In short, we undertake the responsibility to provide the right man for the job.</p>\r\n<p><strong>Sait Bahadur Rai</strong></p>\r\n<p>Managing Director</p>\r\n<p>+977 9851069298</p>', 'ourpages\\January2020\\oxpLr3YUtliqO78jxAfj.jpg', 'message-from-managing-director', '2019-12-29 22:56:00', '2020-01-22 01:04:02', 'Message From Managing director'),
+(3, '<p>I&rsquo;d like to convey you my personal regards and welcome you to witness the potentials and value of choosing to work with us as your manpower recruitment partner.&nbsp;</p>\r\n<p>I welcome you to Mahad Manpower Pvt. Ltd. which will guarantee you experience and facility like never before with world class recruitment services with emphasis on quality, understanding and careful analysis into each candidate&rsquo;s adaptability to bring about our satisfaction.</p>\r\n<p>The best thing about Mahad Manpower Pvt. Ltd. is that you have the advantage of securing your corporate goals through utilization of its resource base, professionals, and strategic alliances we have formed partners from all around the world. Evermore concerned on working on behalf of you, we assure, you&rsquo;ll find our services unbeatable and second to none.</p>\r\n<p><strong>Mariyanti T Jhin </strong></p>\r\n<p>Business Development Director</p>\r\n<p>+017 400 7933</p>', 'ourpages\\January2020\\zghGbcnswg5s7ybhvMnr.jpg', 'message-from-business-development-director', '2019-12-29 23:22:00', '2020-01-22 01:06:36', 'Message From Business Development Director'),
+(4, NULL, NULL, 'message-from-executive-directors', '2019-12-30 00:26:00', '2020-01-16 02:31:58', 'Message From Executive Directors'),
+(5, NULL, NULL, 'license-certificate', '2020-01-14 01:07:00', '2020-01-14 02:05:53', 'License And Certificate'),
+(7, '<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">I am grateful for your deep interest and time you spent in getting to know about Mahad Manpower Pvt. Ltd.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">I welcome you to Mahad Manpower Pvt. Ltd. which will guarantee you experience and facility like never before with world class recruitment services with emphasis on quality, understanding and careful analysis into each candidate&rsquo;s adaptability to bring about our satisfaction.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">The best thing about Mahad Manpower Pvt. Ltd. is that you have the advantage of securing your corporate goals through utilization of its resource base, professionals, and strategic alliances we have formed partners from all around the world. Evermore concerned on working on behalf of you, we assure, you&rsquo;ll find our services unbeatable and second to none.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Vekha Bahadur Ghimire</span><br style=\"box-sizing: border-box;\" />Executive Director<br style=\"box-sizing: border-box;\" />+977 9851055194, +60 126677914</p>', NULL, 'Vekha-Bahadur-Ghimire', '2020-01-14 03:48:51', '2020-01-14 03:48:51', 'Vekha Bahadur Ghimire'),
+(8, '<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">Would like to present my sincere gratitude for considering us a mong mushrooming numbers of outsourcing agencies. Nepal, a south Asian country with so many undiscovered possibilities has been one of the prospective country for which Mahad Manpower Pvt. Ltd. market has always relied on for the hardworking manpower.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">Along, we trained them furthermore for the same. This is the reason why we have a strong compilation of the human resources bounded with us. And, I am sure that this would be the far most quality that our clients seek too. It would be a wonderful experience and magnanimous opportunity for us to carry the business relationship with you in a near future.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">Thanking you all with kindest Regards,</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Prakash Sapkota</span><br style=\"box-sizing: border-box;\" />Executive Director<br style=\"box-sizing: border-box;\" />+977 9851051553</p>', NULL, 'Prakash-Sapkota', '2020-01-14 04:02:00', '2020-01-14 04:05:05', 'Prakash Sapkota'),
+(9, '<p>Mahad Manpower Pvt. Ltd. has achieved consistent growth over the past 10 years ensuring to become a global leader with the support of our highly qualified panel of experts in screening and recruiting of both White &amp; Blue Collar skilled, semi-skilled &amp; unskilled personnel in the field of Engineering, Oil and Gas, Shutdowns / Turnarounds (Maintenance), Electrical &amp; Instrumentation, EPC, Construction, Water Treatment &amp; Sewage Projects, Petrochemicals, Power &amp; Utilities, Hospitality, Catering etc.</p>\r\n<p>We offer wide variety of services like Talent Acquisition, Project Recruitments, Manpower Services, Technical Hiring &amp; Sourcing, Head Hunting etc. Mahad Manpower Pvt. Ltd. target over 2000+ placements every year around the globe specially in GCC. We are one of the fast growing recruitment firm globally recognized market leaders in varied Industry Sectors providing from Candidates to major blue chip companies.</p>\r\n<p>We assure that, our team of experts are highly qualified &amp; committed in providing all types of reliable recruitment solutions for hiring the best talent and services in fulfilling the Client Requirements.</p>\r\n<p>We are feeling pleasure introducing our organization Mahad Manpower Pvt. Ltd. as a Manpower requirement agent of the nation, and feel much privileged to reach to you through this company profile. On this very auspicious occasion of introducing ourselves as a company, we, on behalf of board of directors and staffs, would like to extend our sincere gratitude to you all the well wishers or affiliated individuals and institutions for all the kind and support.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is conceived and planned by its executive team having expertise and experiences of more then ten years in supplying the Nepali workers and human resources of various categories ranking in four parts as professionals, skilled technicians, semi-skilled to unskilled human resource particularly in the field of engineering, building construction and contracting ,office personnel management, transportation, hotels and catering staffs, hospitals, garments and textile and many more.&nbsp;</p>', NULL, 'about-company', '2020-01-16 02:35:00', '2020-01-16 02:37:50', 'About Us'),
+(10, '<div>\r\n<div>\r\n<div>\r\n<p>Mahad Manpower is a professional HR management organization in Nepal, which has been providing overseas recruitment services to our clients in Saudi Arabia, Kuwait, U.A.E, Oman, Qatar, Bahrain, Malaysia and Far East countries. Our executives have a combined recruitment consultancy experience spanning over thirty years in a wide variety of industry sectors. With this breadth of experience and expertise we are specialists who can satisfy every specific recruitment challenge.</p>\r\n<p>We are providing overseas recruitment services on the following categories as: Engineering / Construction, Information Technology, Telecommunication, Healthcare, Finance / Banking, Garment and textiles, Vehicle/ Heavy Equipment Operator / Auto Mechanic &amp; Maintenance, Hotel and catering, Hospitality etc.</p>\r\n<p>The recruitment field and areas are:</p>\r\n<ul>\r\n<li>Professional</li>\r\n<li>Skilled</li>\r\n<li>Semi-skilled</li>\r\n<li>Unskilled</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>', NULL, 'overseas-recruitment', '2020-01-21 01:57:00', '2020-01-22 01:14:12', 'Overseas Recruitment'),
+(11, '<p><strong>Training</strong></p>\r\n<p>We have managed the training as per the requirement of the particular candidate no matter what they are unskilled labour or professionals, training is conducted to meet the jobs\' specification and requirements as per the demand of the client.</p>\r\n<p><strong>Orientation</strong></p>\r\n<p>The government of many countries requires the entire contract workers to attend the pre-departure orientation classes before their entry in the respective country. For this, to let the traveling people participate in such classes we make arrangement of such classes in the qualified centers in Nepal, this will enable to know the workers of the condition of their host country, their political &amp; religious situation, rules &amp; regulations to be followed, their working environment &amp; so on.</p>\r\n<p>Our orientation programs serve multiple purposes including:</p>\r\n<ul>\r\n<li>Creating a favorable working approach and environment.</li>\r\n<li>Explaining the benefits of working in foreign company.</li>\r\n<li>Ease the new hire\'s entry into the work group.</li>\r\n<li>Help the new hire see where they fit in.</li>\r\n</ul>', NULL, 'training-and-orientation', '2020-01-21 02:00:00', '2020-01-22 01:35:31', 'Training and Orientation'),
+(12, '<p>Once Contract signing with the employee is done, travel arrangement becomes the final procedure. Tickets, VISA and various travel assistance for mobilization and demobilization of personnel from home country to the remote region is handled by us.</p>\r\n<p>Our services include handling the entire official documents: original passport, air ticket and government&rsquo;s approval letter to the employee before departure. We also acquaint them with all of the traveling procedures in order to reach their destination without complexity.</p>', NULL, 'travel-management', '2020-01-21 02:00:00', '2020-01-22 01:14:53', 'Travel Management'),
+(13, '<p><strong>Recruitment Process</strong></p>\r\n<p>Our well qualified and experienced consultants and experts are assigned for the thorough inspection of the application at various stages making the process reliable.</p>\r\n<p><strong>Sourcing method</strong></p>\r\n<p>Owing to our extensive client list and the nature and scale of projects we have been and are associated with, we have several candidates registering themselves with us everyday, via our online career portal, fax, e-mail or by walk in. This information is collated, sorted and saved in a professionally managed and updated databank that provides a vast source of resources that can be easily accessed.</p>\r\n<p>For specific client requirements, we regularly advertise in the leading local newspapers after getting the required documents for Labour Ministry permission. Responses we receive from these exercises undergo a preliminary short listing. Candidates are then contacted and asked to come in for an assessment by our technical consultants.</p>\r\n<p><strong>Methods of authenticating applicant qualifications</strong></p>\r\n<p>We are well networked with all the top educational institutions within the regions we source personnel form, enabling us to verify applicant qualifications. This ensures that the candidates selected based on their qualification and experience can cope with the job requirement, if not exceed expectations.</p>\r\n<p><strong>Testing for Engineers, Supervisors, Foreman, Technicians &amp; Skilled Workers</strong></p>\r\n<p>For the above categories, we have implemented a stringent aptitude and attitude test that includes a technical questionnaire. Candidates are required to score a minimum of 75% on this test to qualify for the next round of assessment. This ensures that the candidates we select have a high level of proficiency in their respective fields, assuring clients of the quality standards we conform to.</p>\r\n<p><strong>Screening &amp; Short-listing by Technical Consultants</strong></p>\r\n<p>All screening and assessment for the databank or final round of interviews is conducted by our highly experienced technical consultants and if required, candidates are sent for trade-testing. Short-listed applicants are graded on their professional and general knowledge, presentation and attitude.</p>\r\n<p><strong>Final Selection by Clients</strong></p>\r\n<p>Once candidates have been selected for the final round of interviews, their applications are presented to the client for final selection. If required, we can carry out the final selection process on behalf of the client, based on a detailed brief on the requirements from the client. Our selection process follows rigorous theoretical and practical trade tests, ensuring that candidates are qualified only on merit. Official trade test reports can also be provided if required.</p>\r\n<p><strong>Medical Examination Facilities</strong></p>\r\n<p>We undertake conducting the necessary medical examinations for candidates and doctors are registered with medical institutions that are approved by the consulate of the country that the candidate is recruited for. This minimizes paperwork for our clients, making the recruitment process more convenient.</p>\r\n<p><strong>Mobilization Period</strong></p>\r\n<p>A minimum of two weeks is required, to mobilize candidates after selection and receipt of visa for actual deployment. Your visit in our office for more information will be highly praised.</p>', NULL, 'recruitment', '2020-01-21 02:01:00', '2020-01-22 03:01:49', 'Recruitment'),
+(14, '<p>Requirements of documents from workers seeking employment vary from one country to another. Requirement of documents also depend on whether the embassy of the manpower importing country has a diplomatic mission in Nepal or not. Basically, we demand two types of documents before making a final decision for sending workers overseas. We follow the standard government provisions to avoid unnecessary hassles to the workers.</p>\r\n<p><strong>Principle Documents:</strong></p>\r\n<p>1. Demand Letter</p>\r\n<p>2. Power of Attorney</p>\r\n<p>3. Employment Contract</p>\r\n<p>4. Service Agreement between Company &amp; our Company</p>\r\n<p>5. Guarantee Letter</p>\r\n<p><strong>Demand Letter</strong></p>\r\n<p>Addressed to authorizing Mahad Manpower Pvt. Ltd. (Govt. Lic. No. 981/067/068) Kathmandu, Nepal mentioning the number of workers required in each categories with salary, duty hour, food, accommodation &amp; other benefits to workers.</p>\r\n<p><strong>Power of Attorney</strong></p>\r\n<p>Addressed to authorizing Mahad Manpower Pvt. Ltd. (Govt. Lic. No. 981/067/068) Kathmandu, Nepal to be true and lawful attorney and agent of Nepal.</p>\r\n<p><strong>Service Agreement</strong></p>\r\n<p>Employing Company should provide us service agreement between company and recruitment agency in Nepal.</p>\r\n<p><strong>Employment Contract</strong></p>\r\n<p>One copy each signed and Sealed by the employer &amp; employee.</p>\r\n<p><strong>Guarantee Letter</strong></p>\r\n<p>Signed and stamped copy by the employer company should be mention that not to be deploy to other countries for work purpose. Note: Documents Should be duly sealed by the Ministry of Foreign Affairs, Chamber of Commerce or concerned Government Authority &amp; Nepalese Embassy of the respective country</p>', NULL, 'required-documents', '2020-01-21 02:03:00', '2020-01-22 01:32:32', 'REQUIRED DOCUMENTS'),
+(15, '<p>- MVD Internation SDN BHD</p>\r\n<p>- Pentagon Protection Services SDN BHD</p>\r\n<p>- Allsafe Guards SDN BHD</p>\r\n<p>- Mac Security Consultants SDN BHD</p>\r\n<p>- Bomatec (Malayasia) SDN BHD</p>\r\n<p>- JS Security Services SDN BHD</p>\r\n<p>- MPV - Malaysia SDN BHD</p>\r\n<p>- Maxonic Marketing SDN BHD</p>\r\n<p>- BRC Industries SDN BHD</p>\r\n<p>- Meking Industries SB.</p>\r\n<p>- Linaco Manufacturing (M) SDN BHD</p>\r\n<p>- Beryl&rsquo;s Chocolate &amp; Confectionery SDN BHD</p>\r\n<p>- Holographic Label SDN BHD</p>\r\n<p>- North Soileng (M) SDN BHD</p>\r\n<p>- Universal Guard SDN BHD</p>\r\n<p>- Graduan Bersatu Padat SDN BHD</p>\r\n<p>- Impian Murni Enterprise</p>\r\n<p>- Versatile Protection SDN BHD</p>\r\n<p>- STS Albarakah SDN BHD</p>\r\n<p>- LKY Plantations SDN BHD</p>\r\n<p>- Kung fu Paradise SDN BHD</p>\r\n<p>- Implan Murni Enterprise</p>\r\n<p>- Chun YIP Metal Polishing SDN BHD</p>\r\n<p>- Zayana Maju Enterprise</p>\r\n<p>- LB LAND</p>\r\n<p>- Hasil Bumi Maju Enterprise</p>\r\n<p>- Prospeed Cleaning Services and Laundry SDN BHD</p>\r\n<p>- Fong Lye Restaurant (MVC) SDN BHD</p>', NULL, 'malaysia', '2020-01-21 02:04:13', '2020-01-21 02:04:13', 'MALAYSIA'),
+(16, '<p>- AL-Mira Center for Trading Co. Ltd.</p>\r\n<p>- AL-Mira Investment Group Co. Ltd.</p>\r\n<p>- Zahrat Al Banafsaj Restaurants EST</p>\r\n<p>- Indian Jungle Restaurant</p>\r\n<p>- Naif Thameral. Otaibi Transportation EST</p>\r\n<p>- AL Mehthel General Contracting EST</p>', NULL, 'saudi-arabia', '2020-01-21 02:04:38', '2020-01-21 02:04:38', 'SAUDI ARABIA'),
+(17, '<p>- Ferropan Oilfield Service &amp; Supplies LLC</p>\r\n<p>- Nirvana General Contracting LLC</p>\r\n<p>- Enkay Uniforms LLC</p>\r\n<p>- Neelkamal Plastic Factroy LLC</p>\r\n<p>- Bentoya Kitchen LLC</p>\r\n<p>- Rawafed Recruitment Services LLC</p>\r\n<p>- Gulf Oasis Manpower Supply</p>\r\n<p>- Titanium Gents Saloon Branch</p>\r\n<p>- Ahmed Jaber Abdulla Mohammed SHD</p>\r\n<p>- Bento-ya Kitchen LLC</p>\r\n<p>- BMJ Industries FZ LLC</p>\r\n<p>- Best Professionals Technical Services LLC</p>', NULL, 'uae', '2020-01-21 02:05:16', '2020-01-21 02:05:16', 'UAE'),
+(18, '<p>- Sahab International Trading &amp; Maketing Co</p>\r\n<p>- Multicon Trading Wll</p>\r\n<p>- Softlink Intl. Trading &amp; Contracting Wll</p>\r\n<p>- Front International Contracting &amp; Cleaning Wll</p>\r\n<p>- Uniplast Wll</p>\r\n<p>- AL- Feroz Int&rsquo;l</p>\r\n<p>- Trading Wll</p>\r\n<p>- Ramix Concrete Company LLC</p>', NULL, 'qatar', '2020-01-21 02:05:47', '2020-01-21 02:05:47', 'Qatar');
 
 -- --------------------------------------------------------
 
@@ -503,7 +584,17 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (53, 'read_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
 (54, 'edit_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
 (55, 'add_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
-(56, 'delete_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27');
+(56, 'delete_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
+(57, 'browse_executive_directors', 'executive_directors', '2020-01-21 04:46:43', '2020-01-21 04:46:43'),
+(58, 'read_executive_directors', 'executive_directors', '2020-01-21 04:46:43', '2020-01-21 04:46:43'),
+(59, 'edit_executive_directors', 'executive_directors', '2020-01-21 04:46:43', '2020-01-21 04:46:43'),
+(60, 'add_executive_directors', 'executive_directors', '2020-01-21 04:46:43', '2020-01-21 04:46:43'),
+(61, 'delete_executive_directors', 'executive_directors', '2020-01-21 04:46:43', '2020-01-21 04:46:43'),
+(67, 'browse_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54'),
+(68, 'read_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54'),
+(69, 'edit_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54'),
+(70, 'add_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54'),
+(71, 'delete_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54');
 
 -- --------------------------------------------------------
 
@@ -522,15 +613,22 @@ CREATE TABLE `permission_role` (
 
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (1, 1),
+(1, 4),
 (2, 1),
 (3, 1),
 (4, 1),
+(4, 4),
 (5, 1),
 (6, 1),
+(6, 4),
 (7, 1),
+(7, 4),
 (8, 1),
+(8, 4),
 (9, 1),
+(9, 4),
 (10, 1),
+(10, 4),
 (11, 1),
 (12, 1),
 (13, 1),
@@ -552,31 +650,67 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (29, 1),
 (30, 1),
 (31, 1),
+(31, 4),
 (32, 1),
+(32, 4),
 (33, 1),
+(33, 4),
 (34, 1),
+(34, 4),
 (35, 1),
+(35, 4),
 (36, 1),
+(36, 4),
 (37, 1),
+(37, 4),
 (38, 1),
+(38, 4),
 (39, 1),
+(39, 4),
 (40, 1),
+(40, 4),
 (41, 1),
+(41, 4),
 (42, 1),
 (43, 1),
 (44, 1),
 (45, 1),
 (46, 1),
 (47, 1),
+(47, 4),
 (48, 1),
+(48, 4),
 (49, 1),
+(49, 4),
 (50, 1),
+(50, 4),
 (51, 1),
+(51, 4),
 (52, 1),
 (53, 1),
 (54, 1),
 (55, 1),
-(56, 1);
+(56, 1),
+(57, 1),
+(57, 4),
+(58, 1),
+(58, 4),
+(59, 1),
+(59, 4),
+(60, 1),
+(60, 4),
+(61, 1),
+(61, 4),
+(67, 1),
+(67, 4),
+(68, 1),
+(68, 4),
+(69, 1),
+(69, 4),
+(70, 1),
+(70, 4),
+(71, 1),
+(71, 4);
 
 -- --------------------------------------------------------
 
@@ -601,22 +735,6 @@ CREATE TABLE `posts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `featured`, `created_at`, `updated_at`) VALUES
-(5, 2, 1, 'About Us', NULL, NULL, '<p>Mahad Manpower Pvt. Ltd. has achieved consistent growth over the past 10 years ensuring to become a global leader with the support of our highly qualified panel of experts in screening and recruiting of both White &amp; Blue Collar skilled, semi-skilled &amp; unskilled personnel in the field of Engineering, Oil and Gas, Shutdowns / Turnarounds (Maintenance), Electrical &amp; Instrumentation, EPC, Construction, Water Treatment &amp; Sewage Projects, Petrochemicals, Power &amp; Utilities, Hospitality, Catering etc.</p>\r\n<p>We offer wide variety of services like Talent Acquisition, Project Recruitments, Manpower Services, Technical Hiring &amp; Sourcing, Head Hunting etc. Mahad Manpower Pvt. Ltd. target over 2000+ placements every year around the globe specially in GCC. We are one of the fast growing recruitment firm globally recognized market leaders in varied Industry Sectors providing from Candidates to major blue chip companies.</p>\r\n<p>We assure that, our team of experts are highly qualified &amp; committed in providing all types of reliable recruitment solutions for hiring the best talent and services in fulfilling the Client Requirements.</p>\r\n<p>We are feeling pleasure introducing our organization Mahad Manpower Pvt. Ltd. as a Manpower requirement agent of the nation, and feel much privileged to reach to you through this company profile. On this very auspicious occasion of introducing ourselves as a company, we, on behalf of board of directors and staffs, would like to extend our sincere gratitude to you all the well wishers or affiliated individuals and institutions for all the kind and support.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is conceived and planned by its executive team having expertise and experiences of more then ten years in supplying the Nepali workers and human resources of various categories ranking in four parts as professionals, skilled technicians, semi-skilled to unskilled human resource particularly in the field of engineering, building construction and contracting ,office personnel management, transportation, hotels and catering staffs, hospitals, garments and textile and many more.&nbsp;</p>', 'posts\\December2019\\jUvZuwcpyr2427BzJYSa.jpg', 'about', NULL, NULL, 'PUBLISHED', 0, '2019-12-25 02:09:11', '2019-12-26 23:47:09'),
-(6, 2, 1, 'Area Of Expertise', NULL, NULL, '<p>Our Consultants are dedicated to their own sectors and have access to a unique overview.&nbsp;</p>\r\n<p>Our sourcing professionals have extensive backgrounds and proficiency in a varied scope of global industries.</p>\r\n<p>We hire best talent and enhance the success of our client.</p>\r\n<p>Successfully managed the overall end to end recruitments in the industry sectors listed below:</p>\r\n<p>&bull; Agriculture &amp; Landscaping</p>\r\n<p>&bull; Aviation &amp; Logistics</p>\r\n<p>&bull; Catering Management</p>\r\n<p>&bull; Engineering &amp; Construction</p>\r\n<p>&bull; Facility Management &amp; Services</p>\r\n<p>&bull; Hospitality</p>\r\n<p>&bull; IT &amp; Telecom</p>\r\n<p>&bull; MEP</p>\r\n<p>&bull; Oil &amp; Gas, Petrochemical</p>\r\n<p>&bull; Power &amp; Energy</p>\r\n<p>&bull; Pharmaceuticals &amp; Healthcare</p>', 'posts\\December2019\\4iah02rlcx6fNjK1AOo2.png', 'area-of-expert', NULL, NULL, 'PUBLISHED', 0, '2019-12-25 02:27:34', '2019-12-26 23:26:06'),
-(7, 2, 1, 'Core Services', NULL, NULL, '<p><span style=\"color: #454545; font-family: \'Work Sans\', sans-serif; font-size: 15px; background-color: #fafafa;\">Our Consultants provides their own best core services on your needs</span></p>\r\n<p>&bull; Talent Acquisition</p>\r\n<p>&bull; Project/Overseas Recruitment</p>\r\n<p>&bull; Manpower Services</p>\r\n<p>&bull; Technical Hiring &amp; Sourcing</p>\r\n<p>&bull; Head Hunting</p>\r\n<p>&bull; Interview Facility</p>\r\n<p>&bull; Centre Assistance for Technical Trade Testing</p>', 'posts\\December2019\\3VeG2w5YFewmYwSDz25z.jpg', 'core-services', NULL, NULL, 'PUBLISHED', 0, '2019-12-25 02:31:52', '2019-12-26 00:18:02'),
-(8, 2, 1, 'Other Services', NULL, NULL, '<p>Our Consultant provides the other services along with the core and the expertise</p>\r\n<p>&bull; Air Ticketing</p>\r\n<p>&bull; Certificate Attestation</p>\r\n<p>&bull; Counseling/Feedback Session</p>\r\n<p>&bull; Emigration Services</p>\r\n<p>&bull; Visa Services &amp; Endorsements</p>', 'posts\\December2019\\aX3wD9SpxthutxLvktE7.jpg', 'other-services', NULL, NULL, 'PUBLISHED', 0, '2019-12-26 00:35:04', '2019-12-26 03:41:55'),
-(9, 2, 1, 'REQUIRED DOCUMENTS', NULL, NULL, '<p>Requirements of documents from workers seeking employment vary from one country to another. Requirement of documents also depend on whether the embassy of the manpower importing country has a diplomatic mission in Nepal or not. Basically, we demand two types of documents before making a final decision for sending workers overseas. We follow the standard government provisions to avoid unnecessary hassles to the workers.</p>\r\n<p>Principle Documents:</p>\r\n<p>1. Demand Letter</p>\r\n<p>2. Power of Attorney</p>\r\n<p>3. Employment Contract</p>\r\n<p>4. Service Agreement between Company &amp; our Company</p>\r\n<p>5. Guarantee Letter</p>\r\n<p><strong>Demand Letter:</strong></p>\r\n<p>Addressed to authorizing Mahad Manpower Pvt. Ltd. (Govt. Lic. No. 981/067/068) Kathmandu, Nepal mentioning the number of workers required in each categories with salary, duty hour, food, accommodation &amp; other benefits to workers.</p>\r\n<p><strong>Power of Attorney:</strong></p>\r\n<p>Addressed to authorizing Mahad Manpower Pvt. Ltd. (Govt. Lic. No. 981/067/068) Kathmandu, Nepal to be true and lawful attorney and agent of Nepal.</p>\r\n<p><strong>Service Agreement:</strong></p>\r\n<p>Employing Company should provide us service agreement between company and recruitment agency in Nepal.</p>\r\n<p><strong>Employment Contract:</strong></p>\r\n<p>One copy each signed and Sealed by the employer &amp; employee.</p>\r\n<p><strong>Guarantee Letter:</strong></p>\r\n<p>Signed and stamped copy by the employer company should be mention that not to be deploy to other countries for work purpose.</p>\r\n<p>Note: Documents Should be duly sealed by the Ministry of Foreign Affairs, Chamber of Commerce or concerned Government Authority &amp; Nepalese Embassy of the respective country.</p>\r\n<p>&nbsp;</p>', 'posts\\January2020\\LQfzhLEML7jbtgLrbnfG.jpg', 'required-documents', NULL, NULL, 'PUBLISHED', 0, '2020-01-07 23:41:38', '2020-01-07 23:52:45'),
-(10, 2, 1, 'Recruitment', NULL, NULL, '<h3>Recruitment Process</h3>\r\n<p>Our well qualified and experienced consultants and experts are assigned for the thorough inspection of the application at various stages making the process reliable.</p>\r\n<h3>Sourcing method</h3>\r\n<p>Owing to our extensive client list and the nature and scale of projects we have been and are associated with, we have several candidates registering themselves with us everyday, via our online career portal, fax, e-mail or by walk in. This information is collated, sorted and saved in a professionally managed and updated databank that provides a vast source of resources that can be easily accessed.</p>\r\n<p>For specific client requirements, we regularly advertise in the leading local newspapers after getting the required documents for Labour Ministry permission. Responses we receive from these exercises undergo a preliminary short listing. Candidates are then contacted and asked to come in for an assessment by our technical consultants.</p>\r\n<h3>Methods of authenticating applicant qualifications</h3>\r\n<p>We are well networked with all the top educational institutions within the regions we source personnel form, enabling us to verify applicant qualifications. This ensures that the candidates selected based on their qualification and experience can cope with the job requirement, if not exceed expectations.</p>\r\n<h3>Testing for Engineers, Supervisors, Foreman, Technicians &amp; Skilled Workers</h3>\r\n<p>For the above categories, we have implemented a stringent aptitude and attitude test that includes a technical questionnaire. Candidates are required to score a minimum of 75% on this test to qualify for the next round of assessment. This ensures that the candidates we select have a high level of proficiency in their respective fields, assuring clients of the quality standards we conform to.</p>\r\n<h3>Screening &amp; Short-listing by Technical Consultants</h3>\r\n<p>All screening and assessment for the databank or final round of interviews is conducted by our highly experienced technical consultants and if required, candidates are sent for trade-testing. Short-listed applicants are graded on their professional and general knowledge, presentation and attitude.</p>\r\n<h3>Final Selection by Clients</h3>\r\n<p>Once candidates have been selected for the final round of interviews, their applications are presented to the client for final selection. If required, we can carry out the final selection process on behalf of the client, based on a detailed brief on the requirements from the client. Our selection process follows rigorous theoretical and practical trade tests, ensuring that candidates are qualified only on merit. Official trade test reports can also be provided if required.</p>\r\n<h3>Medical Examination Facilities</h3>\r\n<p>We undertake conducting the necessary medical examinations for candidates and doctors are registered with medical institutions that are approved by the consulate of the country that the candidate is recruited for. This minimizes paperwork for our clients, making the recruitment process more convenient.</p>\r\n<h3>Mobilization Period</h3>\r\n<p>A minimum of two weeks is required, to mobilize candidates after selection and receipt of visa for actual deployment. Your visit in our office for more information will be highly praised.</p>', 'posts\\January2020\\X71tJrDAVvwKMYpkKQD7.jpg', 'recruitment', NULL, NULL, 'PUBLISHED', 0, '2020-01-08 00:07:44', '2020-01-08 00:24:05'),
-(11, 2, 1, 'Qatar', NULL, NULL, '<p>- Sahab International Trading &amp; Maketing Co</p>\r\n<p>- Multicon Trading Wll</p>\r\n<p>- Softlink Intl. Trading &amp; Contracting Wll</p>\r\n<p>- Front International Contracting &amp; Cleaning Wll</p>\r\n<p>- Uniplast Wll</p>\r\n<p>- AL- Feroz Int&rsquo;l</p>\r\n<p>- Trading Wll</p>\r\n<p>- Ramix Concrete Company LLC</p>', NULL, 'qatar', NULL, NULL, 'PUBLISHED', 0, '2020-01-08 23:49:39', '2020-01-08 23:49:39'),
-(12, 2, 1, 'UAE', NULL, NULL, '<p>- Ferropan Oilfield Service &amp; Supplies LLC</p>\r\n<p>- Nirvana General Contracting LLC</p>\r\n<p>- Enkay Uniforms LLC</p>\r\n<p>- Neelkamal Plastic Factroy LLC</p>\r\n<p>- Bentoya Kitchen LLC</p>\r\n<p>- Rawafed Recruitment Services LLC</p>\r\n<p>- Gulf Oasis Manpower Supply</p>\r\n<p>- Titanium Gents Saloon Branch</p>\r\n<p>- Ahmed Jaber Abdulla Mohammed SHD</p>\r\n<p>- Bento-ya Kitchen LLC</p>\r\n<p>- BMJ Industries FZ LLC</p>\r\n<p>- Best Professionals Technical Services LLC</p>', NULL, 'UAE', NULL, NULL, 'PUBLISHED', 0, '2020-01-09 04:14:37', '2020-01-09 04:34:46'),
-(13, 2, 1, 'SAUDI ARABIA', NULL, NULL, '<p>- AL-Mira Center for Trading Co. Ltd.</p>\r\n<p>- AL-Mira Investment Group Co. Ltd.</p>\r\n<p>- Zahrat Al Banafsaj Restaurants EST</p>\r\n<p>- Indian Jungle Restaurant</p>\r\n<p>- Naif Thameral. Otaibi Transportation EST</p>\r\n<p>- AL Mehthel General Contracting EST</p>', NULL, 'saudi-arabia', NULL, NULL, 'PUBLISHED', 0, '2020-01-09 04:20:14', '2020-01-09 04:20:14'),
-(14, 2, 1, 'MALAYSIA', NULL, NULL, '<p>- MVD Internation SDN BHD</p>\r\n<p>- Pentagon Protection Services SDN BHD</p>\r\n<p>- Allsafe Guards SDN BHD</p>\r\n<p>- Mac Security Consultants SDN BHD</p>\r\n<p>- Bomatec (Malayasia) SDN BHD</p>\r\n<p>- JS Security Services SDN BHD</p>\r\n<p>- MPV - Malaysia SDN BHD</p>\r\n<p>- Maxonic Marketing SDN BHD</p>\r\n<p>- BRC Industries SDN BHD</p>\r\n<p>- Meking Industries SB.</p>\r\n<p>- Linaco Manufacturing (M) SDN BHD</p>\r\n<p>- Beryl&rsquo;s Chocolate &amp; Confectionery SDN BHD</p>\r\n<p>- Holographic Label SDN BHD</p>\r\n<p>- North Soileng (M) SDN BHD</p>\r\n<p>- Universal Guard SDN BHD</p>\r\n<p>- Graduan Bersatu Padat SDN BHD</p>\r\n<p>- Impian Murni Enterprise</p>\r\n<p>- Versatile Protection SDN BHD</p>\r\n<p>- STS Albarakah SDN BHD</p>\r\n<p>- LKY Plantations SDN BHD</p>\r\n<p>- Kung fu Paradise SDN BHD</p>\r\n<p>- Implan Murni Enterprise</p>\r\n<p>- Chun YIP Metal Polishing SDN BHD</p>\r\n<p>- Zayana Maju Enterprise</p>\r\n<p>- LB LAND</p>\r\n<p>- Hasil Bumi Maju Enterprise</p>\r\n<p>- Prospeed Cleaning Services and Laundry SDN BHD</p>\r\n<p>- Fong Lye Restaurant (MVC) SDN BHD</p>', NULL, 'malaysia', NULL, NULL, 'PUBLISHED', 0, '2020-01-09 04:22:48', '2020-01-09 04:22:48');
 
 -- --------------------------------------------------------
 
@@ -657,7 +775,7 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'Administrator', '2019-12-25 01:40:27', '2019-12-25 01:40:27'),
-(2, 'user', 'Normal User', '2019-12-25 01:40:27', '2019-12-25 01:40:27');
+(4, 'user', 'user', '2020-01-22 04:08:16', '2020-01-22 04:08:16');
 
 -- --------------------------------------------------------
 
@@ -770,7 +888,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(2, 1, 'nepal', 'admin@gmail.com', 'users/default.png', NULL, '$2y$10$4pPsUeWeFjAHo.MqYSqmlu9nU25MH6LUyBB14zn3EOvm5v/5YBrRi', 'Dd6Z6vDfNU9gUA531htvjgEy4UvGBV4FmsQxS6vA9JcsfjIpekdFwT9419Ho', NULL, '2019-12-25 01:41:51', '2019-12-25 01:41:51');
+(2, 1, 'nepal', 'admin@gmail.com', 'users/default.png', NULL, '$2y$10$4pPsUeWeFjAHo.MqYSqmlu9nU25MH6LUyBB14zn3EOvm5v/5YBrRi', 'EzRb3SGpEDcTR5EjvY5QbdeEuNlNuEyU1ghq1KlbdzqLnYAgAX8PLGXcZUFp', NULL, '2019-12-25 01:41:51', '2019-12-25 01:41:51'),
+(3, 4, 'user', 'user@gmail.com', 'users\\January2020\\lB70llkwIQSg8LLuWrS1.jpg', NULL, '$2y$10$cGLq5zqEW2/GERbrIB4Uqe/xRoxarLt0nr8DpaE1iPiYdPkIJ4mcu', NULL, '{\"locale\":\"en\"}', '2020-01-22 04:09:58', '2020-01-22 04:26:40');
 
 -- --------------------------------------------------------
 
@@ -817,6 +936,12 @@ ALTER TABLE `data_types`
   ADD UNIQUE KEY `data_types_slug_unique` (`slug`);
 
 --
+-- Indexes for table `executive_directors`
+--
+ALTER TABLE `executive_directors`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
@@ -826,6 +951,12 @@ ALTER TABLE `failed_jobs`
 -- Indexes for table `items`
 --
 ALTER TABLE `items`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `license_certificates`
+--
+ALTER TABLE `license_certificates`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -955,13 +1086,19 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `executive_directors`
+--
+ALTER TABLE `executive_directors`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -976,6 +1113,12 @@ ALTER TABLE `items`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `license_certificates`
+--
+ALTER TABLE `license_certificates`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
@@ -985,7 +1128,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -997,7 +1140,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `ourpages`
 --
 ALTER TABLE `ourpages`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -1009,13 +1152,13 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -1027,7 +1170,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -1045,7 +1188,7 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
