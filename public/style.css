@@ -810,7 +810,7 @@ Helper Class
   background-position: center center; }
 
 .bg-image--2 {
-  background-image: url(images/bg/2.jpg);
+  background-image: url(images/bg/26.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
@@ -2055,7 +2055,7 @@ Pagination Style
         color: #0c6dd5; }
   .team__content p {
     margin-bottom: 0;
-    color: #a0a0a0; }
+    color:#261010; }
 
 .team:hover .team__image:before {
   opacity: 0.85;
@@ -2993,8 +2993,8 @@ Navigation Styles
             .main-navigation ul li.cr-dropdown .cr-dropdown-menu li a {
               display: block;
               font-size: 14px;
-              background:#2a2a2a;
-              color: #C4C4C4;
+              background:#f8f9fa;
+              color: #212529;
               padding: 6px 20px;
               position: relative;
               font-weight: 400; }

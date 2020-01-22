@@ -73,13 +73,16 @@
 											</div>
 										</div>
 										<div class="row justify-content-center">
-					
+										@foreach($executives as $executive)
 											<!-- Single Advisor -->
-											<div class="col-lg-4 col-md-6 col-12">
+											<div class="col-lg-12 col-md-6 col-12">
 												<figure class="team">
-													<div class="team__header">
+													<div class="team__header mb-2">
 														{{-- <div class="team__image"> --}}
-															<img src="/images/team/team-member-1.jpg" alt="team member thumb">
+															
+																<img style="width:125px; height:150px" class="rounded mx-auto d-block" src="{{ Voyager::image($executive->photo) }}" alt="team member thumb">
+															
+															
 														{{-- </div> --}}
 														{{-- <div class="team__social"> --}}
 															{{-- <ul>
@@ -89,42 +92,25 @@
 															{{-- </ul>
 														</div> --}}
 													</div>
+												  
 													<figcaption class="team__content">
-														<h5>
-															<a href="/about/Vekha-Bahadur-Ghimire">Vekha Bahadur Ghimire</a>
-														</h5>
+														{{-- <h5>
+															{{$executive->name}}
+														</h5> --}}
+														<div	class="portfolio-area --xlg">
+														
+														{!! $executive->message !!}
+													</div>
 														{{-- <p>Chairman</p> --}}
 													</figcaption>
 												</figure>
+											
 											</div>
+									
+											@endforeach
 											<!--// Single Advisor -->
 					
-											<!-- Single Advisor -->
-											<div class="col-lg-4 col-md-6 col-12">
-												<figure class="team">
-													<div class="team__header">
-														{{-- <div class="team__image"> --}}
-															<img src="/images/team/team-member-2.jpg" alt="team member thumb">
-														{{-- </div> --}}
-														{{-- <div class="team__social">
-															<ul>
-																<li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-																<li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li> --}}
-																{{-- <li class="google-plus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li> --}}
-															{{-- </ul>
-														</div> --}}
-													</div>
-													<figcaption class="team__content">
-														<h5>
-															<a href="/about/Prakash-Sapkota">Prakash Sapkota</a>
-															
-														</h5>
-														{{-- <p>Managing Director</p> --}}
-														
-													</figcaption>
-												</figure>
-											</div>
-											<!--// Single Advisor -->
+
 					
 											<!-- Single Advisor -->
 											{{-- <div class="col-lg-4 col-md-6 col-12">
@@ -167,11 +153,18 @@
 							<section class="single-widget widget-categories">
 									<h6>Categories</h6>
 									<ul>
-										@foreach ($ourpages as $ourpage)
+										{{-- @foreach ($ourpages as $ourpage) --}}
 										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
-											<li><a href="/about/{{ $ourpage->slug }}">{{$ourpage->title}}</a></li>
+											{{-- <li><a href="/pages/{{ $ourpage->slug }}">{{$ourpage->title}}</a></li> --}}
+											{{-- @endif --}}
+										{{-- @endforeach --}}
+
+										@foreach ($lists as $list)
+										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
+											<li><a href="/pages/{{ $list->url }}">{{$list->title}}</a></li>
 											{{-- @endif --}}
 										@endforeach
+
 										{{-- <li><a href="blog-with-right-sidebar.html">Our Licence And Certificate</a></li> --}}
 										{{-- <li><a href="blog-with-right-sidebar.html">list 5</a></li>
 										<li><a href="blog-with-right-sidebar.html">list 6</a></li> --}}

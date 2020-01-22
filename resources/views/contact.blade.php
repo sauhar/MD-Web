@@ -56,9 +56,14 @@
 										</div>
 
 
+										<div class="g-recaptcha" data-sitekey="6LcHFs4UAAAAACVz26vAbgorvAO-aiE9nGQotzxS"></div>
+
+
+
 										<div class="form-group">
 										<button class="btn btn-success">Send mail</button>
 										</div>
+										
 
 										{!! Form::close() !!}
 

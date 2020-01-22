@@ -44,7 +44,7 @@
 				<div class="container d-none d-lg-block">
 					<div class="header__bottom__inner">
 						<div class="header__logo">
-							<a href="index.html">
+							<a href="/">
 								<img id="headerone" src="/images/logo/logo-theme.png" alt="header logo"  style="width: 200px;">
 							</a>
 						</div>
@@ -82,7 +82,7 @@
 												@foreach ($menus as $submenu)
 													@if($submenu->parent_id==$menu->id)
 													<li>
-														<a href="{{ $submenu->url }}">{{$submenu->title}}</a>
+														<a href="/pages/{{ $submenu->url }}">{{$submenu->title}}</a>
 													</li>
 													@endif
 												@endforeach

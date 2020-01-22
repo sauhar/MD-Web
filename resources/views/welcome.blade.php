@@ -26,7 +26,7 @@
 							{{-- <p>Mahad Manpower Pvt. Ltd. is conceived and planned by its executive team having expertise
 							and experiences of more then ten years in supplying the Nepali workers and human resources of various categories ranking in four parts as professionals, skilled technicians, semi-skilled
 							to unskilled human resource particularly in the field of engineering, building construction and contracting ,office personnel management, transportation,hotels and catering staffs,hospitals, garments and textile and many more. </p> --}}
-							<a href="pages/about-company" class="cr-btn">
+							<a href="/pages/about-company" class="cr-btn">
 								<span>Read More</span>
 							</a>
 						</div>
@@ -147,7 +147,7 @@
 								</h5>
 								<p>Mahad Manpower is a professional HR management organization in Nepal, </p> 
 								{{-- <p>Our sourcing professionals have extensive backgrounds and proficiency in a varied scope of global industries.</p> --}}
-								<a href="services/overseas-recruitment" class="cr-btn">
+								<a href="/pages/overseas-recruitment" class="cr-btn">
 									<span>Read More</span>
 								</a>
 								
@@ -169,7 +169,7 @@
 									<a href="/services/training-and-orientation">Training and Orientation</a>
 								</h5>
 								<p>We have managed the training as per the requirement of the particular candidate no matter </p>
-								<a href="services/training-and-orientation" class="cr-btn">
+								<a href="/pages/training-and-orientation" class="cr-btn">
 									<span>Read More</span>
 								</a>
 							</div>
@@ -185,10 +185,10 @@
 							</div>
 							<div class="service__content">
 								<h5>
-									<a href="services/travel-management">Travel Management</a>
+									<a href="">Travel Management</a>
 								</h5>
 								<p>Once Contract signing with the employee is done, travel arrangement becomes the final </p>
-								<a href="services/travel-management" class="cr-btn">
+								<a href="/pages/travel-management" class="cr-btn">
 									<span>Read More</span>
 								</a>
 							</div>
@@ -246,12 +246,12 @@
 
 			<!-- Single Banner -->
 				
-			<div class="banner__single bg-image-custom" style="background-image: url(images/bg/1.jpg);" data-black-overlay="6">
+			<div class="banner__single bg-image-custom" style="background-image: url(images/bg/banner-01.jpg);" data-black-overlay="6">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-7 col-lg-9">
 							<div class="banner__single__content">
-								<h1>WE ARE EXPERT IN <span class="color--theme">BUSINESS CONSULTATION</span></h1>
+								<h1>INCREASE VALUE<span class="color--theme"> THROUGH PEOPLE</span></h1>
 								{{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati excepturi tenetur suscipit voluptatibus
 									iure culpa recusandae nisi dignissimos.</p> --}}
 								<!-- <a href="contact.html" class="cr-btn">
@@ -263,22 +263,22 @@
 				</div>
 			</div>
 
-			<div class="banner__single bg-image-custom" style="background-image: url(images/bg/1.jpg);" data-black-overlay="6">
+			{{-- <div class="banner__single bg-image-custom" style="background-image: url(images/bg/banner-02.jpg);" data-black-overlay="6">
 				<div class="container">
 					<div class="row">
 						<div class="col-xl-7 col-lg-9">
 							<div class="banner__single__content">
 								<h1>WE ARE EXPERT IN <span class="color--theme">BUSINESS CONSULTATION</span></h1>
-								{{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati excepturi tenetur suscipit voluptatibus
-									iure culpa recusandae nisi dignissimos.</p> --}}
-								<!-- <a href="contact.html" class="cr-btn">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati excepturi tenetur suscipit voluptatibus
+									iure culpa recusandae nisi dignissimos.</p>
+								    <a href="contact.html" class="cr-btn">
 									<span>Contact Now</span>
-								</a> -->
+								</a> 
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 			<!-- //Single Banner -->
 		</div>
 	</div>

@@ -89,45 +89,22 @@
                                     <a href="images/portfolio/lg/portfolio-image-lg-2.jpg" class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
                                 </div>
                             </div> --}}
-    
+                            
+                            @foreach($licensecertificates as $licensecertificate)
+
                             <div class="col-md-3 col-sm-3 col-6 portfolio-item filter-completed">
                                 <div class="portfolio">
                                     <div class="portfolio-image">
-                                        <img src="/images/license-certificate/License.jpg" alt="licence image">
+                                    <img src="{{ Voyager::image( $licensecertificate->photo) }}" alt="licence and cerificate">
                                     </div>
                                     <div class="portfolio-content">
-                                        <h5><a href="/client/qatar">License</a></h5>
+                                    <h5> {{$licensecertificate->title}}</h5>
                                         {{-- <h6>Recent</h6> --}}
-                                    </div>
-                                    <a href="/images/license-certificate/lg/PAN.jpg" class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
+                                     </div>
+                                    <a href="{{ Voyager::image( $licensecertificate->photo) }}" class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
                                 </div>
                             </div>
-    
-                            <div class="col-md-3 col-sm-3 col-6 portfolio-item filter-recent">
-                                <div class="portfolio">
-                                    <div class="portfolio-image">
-                                        <img src="/images/license-certificate/OCR.jpg" alt="OCR image">
-                                    </div>
-                                    <div class="portfolio-content">
-                                        <h5><a href="/client/UAE">OCR</a></h5>
-                                        {{-- <h6>Recent</h6> --}}
-                                    </div>
-                                    <a href="/images/license-certificate/lg/OCR.jpg" class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
-                                </div>
-                            </div>
-    
-                            <div class="col-md-3 col-sm-3 col-6 portfolio-item filter-recent filter-completed">
-                                <div class="portfolio">
-                                    <div class="portfolio-image">
-                                        <img src="/images/license-certificate/PAN.jpg" alt="PAN image">
-                                    </div>
-                                    <div class="portfolio-content">
-                                        <h5><a href="/client/saudi-arabia">PAN</a></h5>
-                                        {{-- <h6>Recent</h6> --}}
-                                    </div>
-                                    <a href="/images/license-certificate/lg/PAN.jpg" class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
-                                </div>
-                            </div>
+                            @endforeach
     
                             {{-- <div class="col-md-6 col-sm-6 col-6 portfolio-item filter-running">
                                 <div class="portfolio">
@@ -154,10 +131,17 @@
 							<section class="single-widget widget-categories">
 									<h6>Categories</h6>
 									<ul>
-                                        @foreach ($ourpages as $ourpage)
+                                        {{-- @foreach ($ourpages as $ourpage)
                                         
-											<li><a href="/about/{{ $ourpage->slug }}">{{$ourpage->title}}</a></li>
+											<li><a href="/pages/{{ $ourpage->slug }}">{{$ourpage->title}}</a></li>
+                                        @endforeach --}}
+                                        
+                                        @foreach ($lists as $list)
+										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
+											<li><a href="/pages/{{ $list->url }}">{{$list->title}}</a></li>
+											{{-- @endif --}}
 										@endforeach
+
 										{{-- <li><a href="blog-with-right-sidebar.html">Our Licence And Certificate</a></li> --}}
 										{{-- <li><a href="blog-with-right-sidebar.html">list 5</a></li>
 										<li><a href="blog-with-right-sidebar.html">list 6</a></li> --}}

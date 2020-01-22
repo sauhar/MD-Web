@@ -7,7 +7,7 @@
 					<div class="container">
 						<div class="cr-breadcrumb">
 							<div class="cr-breadcrumb__left">
-								<h2>Message from managing director</h2>
+								<h2>{{ $ourpage->title}}</h2>
 								
 							</div>
 							
@@ -54,8 +54,11 @@
 						<section class="single-widget widget-categories">
 
 								<h6>{{ $ourpage->title }}</h6>
+								@if($ourpage->image!=null)
+								<img style="width:125px; height:150px" class="rounded mx-auto d-block" src="{{ Voyager::image($ourpage->image) }}" alt="">
+								@endif
 								{!! $ourpage->body !!}
-								<img src="{{ Voyager::image($ourpage->image) }}" alt="">
+								{{-- <img src="{{ Voyager::image($ourpage->image) }}" alt=""> --}}
 							
 
 						</section>
@@ -65,18 +68,12 @@
 						<div class="widgets sidebar-widgets">
 
 							<section class="single-widget widget-categories">
-									<h6>Categories</h6>
+									<h6>{{ $menuitem->title}}</h6>
 									<ul>
-										{{-- @php $count = 1; @endphp --}}
-										@foreach ($ourpages as $ourpage)
-											{{-- @if($count<=6) --}}
-										
-											<li><a href="/about/{{ $ourpage->slug }}">{{$ourpage->title}}</a></li>
-											
+										@foreach ($lists as $list)
+										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
+											<li><a href="/pages/{{ $list->url }}">{{$list->title}}</a></li>
 											{{-- @endif --}}
-
-											{{-- @php $count++; @endphp --}}
-
 										@endforeach
 										{{-- <li><a href="blog-with-right-sidebar.html">Our Licence And Certificate</a></li> --}}
 										{{-- <li><a href="blog-with-right-sidebar.html">list 5</a></li>
