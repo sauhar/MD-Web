@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+<title>Contact</title>
+@endsection
 @section('content')
 
 		<!-- Page Conent -->
@@ -14,7 +17,7 @@
 							<div class="col-lg-6 col-12">
 								<div class="pg-appintment">
 									<div class="pg-appintment__title">
-										<h1>Contact us</h1>
+									<h1>contact</h1>
 
 										@if(Session::has('success'))
 										<div class="alert alert-success">
@@ -76,7 +79,25 @@
 									<h1>say hello to us</h1>
 									<p>MAHAD MANPOWER.PVT.LTD</p>
 									<div class="pg-contact__blocks">
-										<div class="single-block address">
+										<div class="single-block">
+											
+										<h6>Address:</h6>
+										<p> {{$contactsides->address}} </p>
+
+										<br/>
+										<h6>Phone:</h6>
+										<p> {{$contactsides->phone}} </p>
+
+										<br/>
+										<h6>Fax:</h6>
+										<p> {{$contactsides->fax}} </p>
+
+										<br/>
+										<h6>Email:</h6>
+										<p> {{$contactsides->email}} </p>
+											<div>
+									
+										{{-- <div class="single-block address">
 											<h6>address</h6>
 											<p>Tinkune, Kathmandu, Nepal</p>
 										</div>
@@ -92,7 +113,7 @@
 											<h6>Web</h6>
 											<p><a href="#">info@mahadmanpower.com.np</a></p>
 											<p><a href="#">www.mahadmanpower.com.np</a></p>
-										</div>
+										</div> --}}
 									</div>
 								</div>
 							</div>

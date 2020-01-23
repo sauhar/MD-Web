@@ -2,7 +2,9 @@
 
 @extends('layouts.app')
 
-
+@section('title')
+<title>Home</title>
+@endsection
 @section('content')
 
 	<main class="page-content">
@@ -32,10 +34,10 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="videopopup-box">
-							<img src="images/videobox/videobox-image.jpg" alt="video popup image">
-							<a href="https://youtu.be/Bg_tJvCA8zw" class="video-btn">
-								<i class="pe-7s-play"></i>
+						{{-- <div class="videopopup-box"> --}}
+							<img src="images/videobox/videobox-image.jpg" alt="company image">
+							{{-- <a href="https://youtu.be/Bg_tJvCA8zw" class="video-btn">
+								<i class="pe-7s-play"></i> --}}
 							</a>
 						</div>
 					</div>

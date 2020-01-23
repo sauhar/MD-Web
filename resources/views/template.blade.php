@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+<title>{{$ourpage->title}}</title>
+@endsection
 
 @section('breadcump')
 				<!-- Breadcrumb Area -->
@@ -7,7 +9,7 @@
 					<div class="container">
 						<div class="cr-breadcrumb">
 							<div class="cr-breadcrumb__left">
-								<h2>{{ $ourpage->title}}</h2>
+								<h2>{{ $ourpage->title }}</h2>
 								
 							</div>
 							

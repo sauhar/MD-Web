@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-
+@section('title')
+<title>{{$ourpage->title}}</title>
+@endsection
 @section('breadcump')
 				<!-- Breadcrumb Area -->
 				<div id="cr-breadcrumb-area" class="cr-breadcrumb-area bg-image--2 section-padding--md" data-overlay="8">

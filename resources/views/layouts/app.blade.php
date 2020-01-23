@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Mahad Manpower</title>
+	@yield('title')
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,8 +22,8 @@
 
 	
 	<!-- Favicons -->
-	<link rel="shortcut icon" href="images/logo.ico">
-	<link rel="apple-touch-icon" href="images/icon.png">
+	<link rel="shortcut icon" href="/images/logo.ico">
+	<link rel="apple-touch-icon" href="/images/icon.png">
 
 	<!-- Google font (font-family: 'Poppins', sans-serif;) -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700" rel="stylesheet">
