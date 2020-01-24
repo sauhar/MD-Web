@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2020 at 11:13 AM
+-- Generation Time: Jan 23, 2020 at 11:00 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -49,17 +49,25 @@ INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Table structure for table `contactsides`
 --
 
-CREATE TABLE `contact` (
+CREATE TABLE `contactsides` (
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` int(11) DEFAULT NULL,
-  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `contactsides`
+--
+
+INSERT INTO `contactsides` (`id`, `address`, `phone`, `fax`, `email`, `created_at`, `updated_at`) VALUES
+(1, 'Tinkune, Kathmandu, Nepal', '+977 1 4112456', '+977  1 4112457', 'info@mahadmanpower.com.np', '2020-01-23 01:02:00', '2020-01-23 02:01:54');
 
 -- --------------------------------------------------------
 
@@ -166,7 +174,14 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (76, 13, 'photo', 'image', 'Photo', 0, 1, 1, 1, 1, 1, '{}', 3),
 (77, 13, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 4),
 (78, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 5),
-(79, 13, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 2);
+(79, 13, 'title', 'text', 'Title', 0, 1, 1, 1, 1, 1, '{}', 2),
+(80, 14, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(81, 14, 'address', 'text', 'Address', 0, 1, 1, 1, 1, 1, '{}', 2),
+(82, 14, 'phone', 'text', 'Phone', 0, 1, 1, 1, 1, 1, '{}', 3),
+(83, 14, 'fax', 'text', 'Fax', 0, 1, 1, 1, 1, 1, '{}', 4),
+(85, 14, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(86, 14, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
+(87, 14, 'email', 'text', 'Email', 0, 1, 1, 1, 1, 1, '{}', 5);
 
 -- --------------------------------------------------------
 
@@ -205,9 +220,9 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2019-12-25 01:40:34', '2019-12-25 01:40:34'),
 (8, 'items', 'items', 'Item', 'Items', 'voyager-watch', 'App\\Item', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2019-12-26 02:40:31', '2019-12-26 02:40:31'),
 (9, 'ourpages', 'ourpages', 'Ourpage', 'Ourpages', NULL, 'App\\Ourpage', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2019-12-27 05:05:28', '2019-12-27 05:05:28'),
-(10, 'contact', 'contact', 'Contact', 'Contacts', NULL, 'App\\Contact', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
 (11, 'executive_directors', 'executive-directors', 'Executive Director', 'Executive Directors', 'voyager-pie-chart', 'App\\ExecutiveDirector', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-01-21 04:46:43', '2020-01-21 05:21:52'),
-(13, 'license_certificates', 'license-certificates', 'License Certificate', 'License Certificates', 'voyager-pie-chart', 'App\\LicenseCertificate', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-01-21 23:12:54', '2020-01-21 23:26:25');
+(13, 'license_certificates', 'license-certificates', 'License Certificate', 'License Certificates', 'voyager-pie-chart', 'App\\LicenseCertificate', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-01-21 23:12:54', '2020-01-21 23:26:25'),
+(14, 'contactsides', 'contactsides', 'Contactside', 'Contactsides', NULL, 'App\\Contactside', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-01-23 00:17:05', '2020-01-23 02:01:26');
 
 -- --------------------------------------------------------
 
@@ -358,7 +373,7 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (16, 2, 'About', '#', '_self', NULL, '#000000', NULL, 2, '2019-12-25 02:12:15', '2020-01-20 23:05:07', NULL, ''),
 (17, 2, 'Services', '#', '_self', NULL, '#000000', NULL, 3, '2019-12-25 02:12:31', '2020-01-20 23:05:29', NULL, ''),
 (18, 2, 'Procedures', '#', '_self', NULL, '#000000', NULL, 4, '2019-12-25 02:12:41', '2020-01-20 23:05:38', NULL, ''),
-(19, 2, 'Contact', '/contact', '_self', NULL, '#000000', NULL, 6, '2019-12-25 02:12:47', '2020-01-21 02:35:48', NULL, ''),
+(19, 2, 'Contact', '/pages/contact', '_self', NULL, '#000000', NULL, 6, '2019-12-25 02:12:47', '2020-01-23 02:25:46', NULL, ''),
 (20, 2, 'About Company', 'about-company', '_self', NULL, '#000000', 16, 1, '2019-12-25 02:12:56', '2020-01-21 01:28:02', NULL, ''),
 (21, 2, 'Message From Chairman', 'message-from-chairman', '_self', NULL, '#000000', 16, 2, '2019-12-25 02:13:03', '2019-12-27 05:19:56', NULL, ''),
 (22, 2, 'Message From Executive Directors', 'message-from-executive-directors', '_self', NULL, '#000000', 16, 5, '2019-12-25 02:13:20', '2020-01-14 02:15:43', NULL, ''),
@@ -368,7 +383,6 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (27, 1, 'Ourpages', '', '_self', NULL, NULL, NULL, 16, '2019-12-27 05:05:29', '2019-12-27 05:05:29', 'voyager.ourpages.index', NULL),
 (30, 2, 'Required Documents', 'required-documents', '_self', NULL, '#000000', 18, 2, '2020-01-07 23:06:54', '2020-01-21 04:19:41', NULL, ''),
 (31, 2, 'Recruitment', 'recruitment', '_self', NULL, '#000000', 18, 1, '2020-01-08 00:08:38', '2020-01-21 04:19:41', NULL, ''),
-(33, 1, 'Contacts', '', '_self', NULL, NULL, NULL, 17, '2020-01-11 23:26:27', '2020-01-11 23:26:27', 'voyager.contact.index', NULL),
 (34, 2, 'License & Certificate', 'license-certificate', '_self', NULL, '#000000', 16, 6, '2020-01-14 00:41:55', '2020-01-22 03:54:04', NULL, ''),
 (35, 2, 'Overseas Recruitment', 'overseas-recruitment', '_self', NULL, '#000000', 17, 1, '2020-01-15 23:39:01', '2020-01-21 02:50:42', NULL, ''),
 (36, 2, 'Training & Orientation', 'training-and-orientation', '_self', NULL, '#000000', 17, 2, '2020-01-15 23:39:49', '2020-01-22 03:52:58', NULL, ''),
@@ -379,7 +393,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (41, 2, 'Saudi-Arabia', 'saudi-arabia', '_self', NULL, '#000000', 38, 4, '2020-01-18 23:54:15', '2020-01-21 02:06:33', NULL, ''),
 (42, 2, 'Malaysia', 'malaysia', '_self', NULL, '#000000', 38, 3, '2020-01-18 23:54:31', '2020-01-21 02:06:27', NULL, ''),
 (44, 1, 'Executive Directors', '', '_self', 'voyager-pie-chart', NULL, NULL, 18, '2020-01-21 04:46:43', '2020-01-21 04:46:43', 'voyager.executive-directors.index', NULL),
-(46, 1, 'License Certificates', '', '_self', 'voyager-pie-chart', NULL, NULL, 19, '2020-01-21 23:12:54', '2020-01-21 23:12:54', 'voyager.license-certificates.index', NULL);
+(46, 1, 'License Certificates', '', '_self', 'voyager-pie-chart', NULL, NULL, 19, '2020-01-21 23:12:54', '2020-01-21 23:12:54', 'voyager.license-certificates.index', NULL),
+(47, 1, 'Contactsides', '', '_self', NULL, NULL, NULL, 20, '2020-01-23 00:17:06', '2020-01-23 00:17:06', 'voyager.contactsides.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -452,9 +467,9 @@ CREATE TABLE `ourpages` (
 --
 
 INSERT INTO `ourpages` (`id`, `body`, `image`, `slug`, `created_at`, `updated_at`, `title`) VALUES
-(1, '<p>It is my privilege to introduce Mahad Manpower Pvt. Ltd. Established in the year 2002 A.D. as a leading human resources Manpower of Nepal with a faith in people&rsquo;s heart. Also, I am delighted to have a positive response from valuable clients and appreciation from the candidates.</p>\r\n<p>Mahad Manpower Pvt. Ltd. works with the objective of providing quality human resources to the companies located abroad. At the same time, we are doing our best to minimize the unemployment crisis in the country and to add the foreign currency to the national treasury.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is proficient and experienced in supplying enthusiastic, reliable and energetic workforce-professionals, skilled and semi skilled etc all around the world. Our vision is to be a quality conscious company assuring better performance of the workers having sincerity, honesty, loyalty and hardworking ability. Since more than a decade.&nbsp;</p>\r\n<p>Last but not the least, I grab this opportunity to thank all those esteemed and prestigious clients who have trusted Mahad Manpower Pvt. Ltd. to supply them with quality manpower. With all those well wishers, Mahad Manpower Pvt. Ltd. has been able to hold a leading position today in Nepal and abroad.</p>\r\n<p>I assure same ahead in the future too.</p>\r\n<p>Thanking you all with kindest Regards,</p>\r\n<p><strong>Ishor Shrestha</strong></p>\r\n<p>Chairman</p>\r\n<p>+977 9851032179</p>', NULL, 'message-from-chairman', '2019-12-27 05:15:00', '2020-01-22 01:36:12', 'Message From Chairman'),
-(2, '<p>We take pleasure in introducing ourselves as an emerging and trust worthy Manpower licensed by the Labor Ministry Government of Nepal. We have proven record of extensive experience in meeting the manpower requirements of the Middle East.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is proficient and experienced in supplying enthusiastic, reliable and energetic workforce-professionals, skilled and semi skilled etc all around the world. Our vision is to be a quality conscious company assuring better performance of the workers having sincerity, honesty, loyalty and hardworking ability. since more than a decade, I always consider the fact that the human potentiality should be utilized to the maximum extent for the betterment of the world. Hence, our priority is always to bridge up the and the human resources. In short, we undertake the responsibility to provide the right man for the job.</p>\r\n<p><strong>Sait Bahadur Rai</strong></p>\r\n<p>Managing Director</p>\r\n<p>+977 9851069298</p>', 'ourpages\\January2020\\oxpLr3YUtliqO78jxAfj.jpg', 'message-from-managing-director', '2019-12-29 22:56:00', '2020-01-22 01:04:02', 'Message From Managing director'),
-(3, '<p>I&rsquo;d like to convey you my personal regards and welcome you to witness the potentials and value of choosing to work with us as your manpower recruitment partner.&nbsp;</p>\r\n<p>I welcome you to Mahad Manpower Pvt. Ltd. which will guarantee you experience and facility like never before with world class recruitment services with emphasis on quality, understanding and careful analysis into each candidate&rsquo;s adaptability to bring about our satisfaction.</p>\r\n<p>The best thing about Mahad Manpower Pvt. Ltd. is that you have the advantage of securing your corporate goals through utilization of its resource base, professionals, and strategic alliances we have formed partners from all around the world. Evermore concerned on working on behalf of you, we assure, you&rsquo;ll find our services unbeatable and second to none.</p>\r\n<p><strong>Mariyanti T Jhin </strong></p>\r\n<p>Business Development Director</p>\r\n<p>+017 400 7933</p>', 'ourpages\\January2020\\zghGbcnswg5s7ybhvMnr.jpg', 'message-from-business-development-director', '2019-12-29 23:22:00', '2020-01-22 01:06:36', 'Message From Business Development Director'),
+(1, '<p>It is my privilege to introduce Mahad Manpower Pvt. Ltd. Established in the year 2002 A.D. as a leading human resources Manpower of Nepal with a faith in people&rsquo;s heart. Also, I am delighted to have a positive response from valuable clients and appreciation from the candidates.</p>\r\n<p>Mahad Manpower Pvt. Ltd. works with the objective of providing quality human resources to the companies located abroad. At the same time, we are doing our best to minimize the unemployment crisis in the country and to add the foreign currency to the national treasury.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is proficient and experienced in supplying enthusiastic, reliable and energetic workforce-professionals, skilled and semi skilled etc all around the world. Our vision is to be a quality conscious company assuring better performance of the workers having sincerity, honesty, loyalty and hardworking ability. Since more than a decade.&nbsp;</p>\r\n<p>Last but not the least, I grab this opportunity to thank all those esteemed and prestigious clients who have trusted Mahad Manpower Pvt. Ltd. to supply them with quality manpower. With all those well wishers, Mahad Manpower Pvt. Ltd. has been able to hold a leading position today in Nepal and abroad.</p>\r\n<p>I assure same ahead in the future too.</p>\r\n<p>Thanking you all with kindest Regards,</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\"><span style=\"color: #000000;\"><strong><span style=\"box-sizing: border-box; font-weight: bolder;\">Ishor Shrestha</span></strong></span><br style=\"box-sizing: border-box;\" /><span style=\"color: #000000;\">Chairman</span><br style=\"box-sizing: border-box;\" /><span style=\"color: #000000;\">+977 9851032179</span></p>', NULL, 'message-from-chairman', '2019-12-27 05:15:00', '2020-01-23 00:08:06', 'Message From Chairman'),
+(2, '<p>We take pleasure in introducing ourselves as an emerging and trust worthy Manpower licensed by the Labor Ministry Government of Nepal. We have proven record of extensive experience in meeting the manpower requirements of the Middle East.</p>\r\n<p>Mahad Manpower Pvt. Ltd. is proficient and experienced in supplying enthusiastic, reliable and energetic workforce-professionals, skilled and semi skilled etc all around the world. Our vision is to be a quality conscious company assuring better performance of the workers having sincerity, honesty, loyalty and hardworking ability. since more than a decade, I always consider the fact that the human potentiality should be utilized to the maximum extent for the betterment of the world. Hence, our priority is always to bridge up the and the human resources. In short, we undertake the responsibility to provide the right man for the job.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\"><strong><span style=\"box-sizing: border-box; font-weight: bolder;\">Sait Bahadur Rai</span></strong><br style=\"box-sizing: border-box;\" /><span style=\"color: #000000;\">Managing Direct</span><br style=\"box-sizing: border-box;\" /><span style=\"color: #000000;\">+977 9851069298</span></p>', 'ourpages\\January2020\\oxpLr3YUtliqO78jxAfj.jpg', 'message-from-managing-director', '2019-12-29 22:56:00', '2020-01-23 00:07:27', 'Message From Managing director'),
+(3, '<p>I&rsquo;d like to convey you my personal regards and welcome you to witness the potentials and value of choosing to work with us as your manpower recruitment partner.&nbsp;</p>\r\n<p>I welcome you to Mahad Manpower Pvt. Ltd. which will guarantee you experience and facility like never before with world class recruitment services with emphasis on quality, understanding and careful analysis into each candidate&rsquo;s adaptability to bring about our satisfaction.</p>\r\n<p>The best thing about Mahad Manpower Pvt. Ltd. is that you have the advantage of securing your corporate goals through utilization of its resource base, professionals, and strategic alliances we have formed partners from all around the world. Evermore concerned on working on behalf of you, we assure, you&rsquo;ll find our services unbeatable and second to none.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\"><strong><span style=\"box-sizing: border-box; font-weight: bolder;\">Mariyanti T Jhin</span></strong><br style=\"box-sizing: border-box;\" /><span style=\"color: #000000;\">Business Development Director</span><br style=\"box-sizing: border-box;\" /><span style=\"color: #000000;\">+017 400 7933</span></p>', 'ourpages\\January2020\\zghGbcnswg5s7ybhvMnr.jpg', 'message-from-business-development-director', '2019-12-29 23:22:00', '2020-01-23 00:07:54', 'Message From Business Development Director'),
 (4, NULL, NULL, 'message-from-executive-directors', '2019-12-30 00:26:00', '2020-01-16 02:31:58', 'Message From Executive Directors'),
 (5, NULL, NULL, 'license-certificate', '2020-01-14 01:07:00', '2020-01-14 02:05:53', 'License And Certificate'),
 (7, '<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">I am grateful for your deep interest and time you spent in getting to know about Mahad Manpower Pvt. Ltd.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">I welcome you to Mahad Manpower Pvt. Ltd. which will guarantee you experience and facility like never before with world class recruitment services with emphasis on quality, understanding and careful analysis into each candidate&rsquo;s adaptability to bring about our satisfaction.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\">The best thing about Mahad Manpower Pvt. Ltd. is that you have the advantage of securing your corporate goals through utilization of its resource base, professionals, and strategic alliances we have formed partners from all around the world. Evermore concerned on working on behalf of you, we assure, you&rsquo;ll find our services unbeatable and second to none.</p>\r\n<p style=\"box-sizing: border-box; margin: 0px; padding-bottom: 20px; color: #525252; font-family: Montserrat, sans-serif;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Vekha Bahadur Ghimire</span><br style=\"box-sizing: border-box;\" />Executive Director<br style=\"box-sizing: border-box;\" />+977 9851055194, +60 126677914</p>', NULL, 'Vekha-Bahadur-Ghimire', '2020-01-14 03:48:51', '2020-01-14 03:48:51', 'Vekha Bahadur Ghimire'),
@@ -580,11 +595,6 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (49, 'edit_ourpages', 'ourpages', '2019-12-27 05:05:29', '2019-12-27 05:05:29'),
 (50, 'add_ourpages', 'ourpages', '2019-12-27 05:05:29', '2019-12-27 05:05:29'),
 (51, 'delete_ourpages', 'ourpages', '2019-12-27 05:05:29', '2019-12-27 05:05:29'),
-(52, 'browse_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
-(53, 'read_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
-(54, 'edit_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
-(55, 'add_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
-(56, 'delete_contact', 'contact', '2020-01-11 23:26:27', '2020-01-11 23:26:27'),
 (57, 'browse_executive_directors', 'executive_directors', '2020-01-21 04:46:43', '2020-01-21 04:46:43'),
 (58, 'read_executive_directors', 'executive_directors', '2020-01-21 04:46:43', '2020-01-21 04:46:43'),
 (59, 'edit_executive_directors', 'executive_directors', '2020-01-21 04:46:43', '2020-01-21 04:46:43'),
@@ -594,7 +604,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (68, 'read_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54'),
 (69, 'edit_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54'),
 (70, 'add_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54'),
-(71, 'delete_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54');
+(71, 'delete_license_certificates', 'license_certificates', '2020-01-21 23:12:54', '2020-01-21 23:12:54'),
+(72, 'browse_contactsides', 'contactsides', '2020-01-23 00:17:06', '2020-01-23 00:17:06'),
+(73, 'read_contactsides', 'contactsides', '2020-01-23 00:17:06', '2020-01-23 00:17:06'),
+(74, 'edit_contactsides', 'contactsides', '2020-01-23 00:17:06', '2020-01-23 00:17:06'),
+(75, 'add_contactsides', 'contactsides', '2020-01-23 00:17:06', '2020-01-23 00:17:06'),
+(76, 'delete_contactsides', 'contactsides', '2020-01-23 00:17:06', '2020-01-23 00:17:06');
 
 -- --------------------------------------------------------
 
@@ -686,11 +701,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (50, 4),
 (51, 1),
 (51, 4),
-(52, 1),
-(53, 1),
-(54, 1),
-(55, 1),
-(56, 1),
 (57, 1),
 (57, 4),
 (58, 1),
@@ -710,7 +720,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (70, 1),
 (70, 4),
 (71, 1),
-(71, 4);
+(71, 4),
+(72, 1),
+(73, 1),
+(74, 1),
+(75, 1),
+(76, 1);
 
 -- --------------------------------------------------------
 
@@ -888,7 +903,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(2, 1, 'nepal', 'admin@gmail.com', 'users/default.png', NULL, '$2y$10$4pPsUeWeFjAHo.MqYSqmlu9nU25MH6LUyBB14zn3EOvm5v/5YBrRi', 'EzRb3SGpEDcTR5EjvY5QbdeEuNlNuEyU1ghq1KlbdzqLnYAgAX8PLGXcZUFp', NULL, '2019-12-25 01:41:51', '2019-12-25 01:41:51'),
+(2, 1, 'nepal', 'admin@gmail.com', 'users/default.png', NULL, '$2y$10$4pPsUeWeFjAHo.MqYSqmlu9nU25MH6LUyBB14zn3EOvm5v/5YBrRi', 'bhhLY9KlQOm4FKP2KNnxye3PdqbJMu75neSqYvId2GvX4EgWXkrirnKJFY7N', NULL, '2019-12-25 01:41:51', '2019-12-25 01:41:51'),
 (3, 4, 'user', 'user@gmail.com', 'users\\January2020\\lB70llkwIQSg8LLuWrS1.jpg', NULL, '$2y$10$cGLq5zqEW2/GERbrIB4Uqe/xRoxarLt0nr8DpaE1iPiYdPkIJ4mcu', NULL, '{\"locale\":\"en\"}', '2020-01-22 04:09:58', '2020-01-22 04:26:40');
 
 -- --------------------------------------------------------
@@ -915,9 +930,9 @@ ALTER TABLE `categories`
   ADD KEY `categories_parent_id_foreign` (`parent_id`);
 
 --
--- Indexes for table `contact`
+-- Indexes for table `contactsides`
 --
-ALTER TABLE `contact`
+ALTER TABLE `contactsides`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1077,22 +1092,22 @@ ALTER TABLE `categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT for table `contactsides`
 --
-ALTER TABLE `contact`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `contactsides`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `executive_directors`
@@ -1128,7 +1143,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1152,7 +1167,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `posts`
