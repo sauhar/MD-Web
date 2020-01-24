@@ -23,22 +23,22 @@
                     <div class="social-icons social-icons--rounded">
                         <ul>
                             <li class="facebook">
-                                <a href="https://www.facebook.com/">
+                                <a href="#">
                                     <i class="fa fa-facebook"></i>
                                 </a>
                             </li>
                             <li class="twitter">
-                                <a href="https://twitter.com/">
+                                <a href="#">
                                     <i class="fa fa-twitter"></i>
                                 </a>
                             </li>
                             <li class="instagram">
-                                <a href="https://www.instagram.com/">
+                                <a href="#">
                                     <i class="fa fa-instagram"></i>
                                 </a>
                             </li>
                             <li class="google-plus">
-                                <a href="https://plus.google.com/discover">
+                                <a href="#">
                                     <i class="fa fa-google-plus"></i>
                                 </a>
                             </li>
@@ -132,10 +132,10 @@
                                 <a href="mailto://info@mahadmanpower.com.np">info@mahadmanpower.com.np</a>
                             </p>
                             <p>
-                                <li>
-                                <a href="www.mahadmanpower.com.np" target=_blank>www.mahadmanpower.com.np</a>
+                                {{-- <li>
+                                <a href="#" target=_blank>www.mahadmanpower.com.np</a>
                             </p>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
                 <!--// Single Widget -->

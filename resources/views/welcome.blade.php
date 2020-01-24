@@ -253,7 +253,7 @@
 					<div class="row">
 						<div class="col-xl-7 col-lg-9">
 							<div class="banner__single__content">
-								<h1>INCREASE VALUE<span class="color--theme"> THROUGH PEOPLE</span></h1>
+								<h1>INCREASING VALUE<span class="color--theme"> THROUGH PEOPLE</span></h1>
 								{{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati excepturi tenetur suscipit voluptatibus
 									iure culpa recusandae nisi dignissimos.</p> --}}
 								<!-- <a href="contact.html" class="cr-btn">
