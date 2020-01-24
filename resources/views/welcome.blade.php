@@ -35,7 +35,7 @@
 					</div>
 					<div class="col-lg-6">
 						{{-- <div class="videopopup-box"> --}}
-							<img src="images/videobox/videobox-image.jpg" alt="company image">
+							<img src="img/home-photo.png" alt="company image">
 							{{-- <a href="https://youtu.be/Bg_tJvCA8zw" class="video-btn">
 								<i class="pe-7s-play"></i> --}}
 							</a>

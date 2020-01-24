@@ -64,7 +64,15 @@ Basic Styles
 ********************/
 /**
 Reset Styles
+
 */
+
+
+.feature__content>p{
+  font-size: 12px!important;
+}
+
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3311,7 +3319,7 @@ Features area styles
   .feature {
     padding: 54px 30px;
     min-height: 450px;
-  } }
+  } 
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .feature {
