@@ -121,18 +121,18 @@ body {
   margin: 0; }
 
 a {
-  color: #ca3c08;
+  color:#949494;
   text-decoration: none; }
 
-a:visited {
-  color: #ac0404; }
+/* a:visited {
+  color: #ac0404; } */
 
 a:focus {
   outline: thin dotted; }
 
 a:active,
 a:hover {
-  color: #ea9629;
+  color: #007bff;
   outline: 0; }
 
 a:hover {
@@ -438,7 +438,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Work Sans", sans-serif;
-  color: #454545;
+  color:#949494;
   font-weight: 400; }
 
 img {

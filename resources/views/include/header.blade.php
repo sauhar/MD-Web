@@ -198,7 +198,7 @@
 				<div class="container d-block d-lg-none">
 					<div class="mobile-menu clearfix d-md-block d-lg-none">
 						<a class="mobile-logo" href="index.html">
-							<img src="images/logo/logo-theme.png" alt="logo">
+							<img src="/images/logo/logo-theme.png" alt="logo">
 						</a>
 					</div>
 				</div>
