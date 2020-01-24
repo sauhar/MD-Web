@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+<title>{{$ourpage->title}}</title>
+@endsection
 
 @section('breadcump')
 				<!-- Breadcrumb Area -->

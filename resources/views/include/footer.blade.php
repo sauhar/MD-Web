@@ -9,7 +9,7 @@
                 <!-- Single Widget -->
                 <div class="widget widget-about">
                     <div class="footer-area__logo">
-                        <a href="index">
+                        <a href="/">
                             <img src="/images/logo/logo-theme1.png" alt="footer logo">
                         </a>
                     </div>
