@@ -140,7 +140,19 @@
                     </ul>
                 </div>
                 <!--// Single Widget -->
-
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer-area__copyright bg--dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright text-center">
+                        Copyright © Mahad Manpower Pvt.Ltd. All Rights Reserved. Powered by: 
+                        <a href="http://www.keronevadesign.com/"target="_blank">Keroneva Design</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
