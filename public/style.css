@@ -5367,7 +5367,7 @@ Footer Styles
 .copyright {
   padding: 22px 0;
   font-size: 13px;
-  color: #bbbbbb;
+  color: #949494;
   font-weight: 400; }
   .copyright p {
     margin-bottom: 0; }
@@ -5375,7 +5375,8 @@ Footer Styles
     color: #007bff;
     font-weight: 600; }
     .copyright a:hover {
-      opacity: 0.8; }
+      
+      color: #fd7e14; }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .footer--widgets .widget-about {
