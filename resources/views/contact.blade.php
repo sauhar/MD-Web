@@ -77,7 +77,7 @@
 							<div class="col-lg-6 col-12">
 								<div class="pg-contact__content">
 									<h1>say hello to us</h1>
-									<p>MAHAD MANPOWER.PVT.LTD</p>
+									<p>MAHAD MANPOWER PVT.LTD</p>
 									<div class="pg-contact__blocks">
 										<div class="single-block">
 											
@@ -95,7 +95,7 @@
 										<br/>
 										<h6>Email:</h6>
 										<p> {{$contactsides->email}} </p>
-											<div>
+										<div>
 									
 										{{-- <div class="single-block address">
 											<h6>address</h6>

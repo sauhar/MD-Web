@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\MenuItem;
 use App\Menu;
+use App\ContactSide;
 
 class HomeController extends Controller
 {
@@ -31,10 +32,12 @@ class HomeController extends Controller
     //     ]);
     // }
     public function wlcome(){
+        $contactsides = ContactSide::first();
         $menus = MenuItem::where('menu_id',2)->orderBy('order')->get();
         // $menu_items = menu_item::where('menu_id',2)->orderBy('order')->get();
 
         return view('welcome')->with([
+            'contactsides'=>$contactsides,
             'menus'=>$menus,
             
             // 'menu_items'=>$menu_items

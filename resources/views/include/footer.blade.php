@@ -119,17 +119,18 @@
                     <h5 class="widget-title">Contact Info</h5>
                     <ul>
                         <li>
-                            <p>MAHAD MANPOWER.PVT.LTD</p>
+                            <p>MAHAD MANPOWER PVT.LTD</p>
                         </li>
                         <li>
                             <p>
-                                <a href="callto://+977 1 4112456">+977 1 4112456</a>
+                                {{$contactsides->phone}}
                             </p>
                             
                         </li>
                         <li>
                             <p>
-                                <a href="mailto://info@mahadmanpower.com.np">info@mahadmanpower.com.np</a>
+                                {{-- <a href="mailto://info@mahadmanpower.com.np">info@mahadmanpower.com.np</a> --}}
+                                {{$contactsides->email}}
                             </p>
                             <p>
                                 {{-- <li>

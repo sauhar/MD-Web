@@ -23,6 +23,7 @@ class DemoController extends Controller
 
         public function check1($url){
 
+
             if($url=='contact'){
               
                 $contactsides = ContactSide::first();
