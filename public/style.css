@@ -774,7 +774,7 @@ Helper Class
   background: #999999; }
 
 .bg--dark {
-  background: #222222; }
+  background: #2a2a2a; }
 
 .bg--dark--light {
   background: #2a2a2a; }
@@ -994,7 +994,7 @@ Helper Class
   padding: 120px 0; }
 
 .section-padding--lg {
-  padding: 100px 0; }
+  padding: 2em 0; }
 
 .section-padding--md {
   padding: 80px 0; }
