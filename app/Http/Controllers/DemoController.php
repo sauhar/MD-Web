@@ -57,6 +57,7 @@ class DemoController extends Controller
                     'executives'=>$executives,
                     'ourpage'=>$ourpage,
                     'ourpages'=>$ourpages,
+                    'menuitem'=>$menuitem,
                     
                     'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
                     'lists'=>$sidebarlists,
@@ -70,6 +71,7 @@ class DemoController extends Controller
                     'licensecertificates'=>$licensecertificates,
                     'ourpage'=>$ourpage,
                     'ourpages'=>$ourpages,
+                    'menuitem'=>$menuitem,
                     
                     'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
                     'lists'=>$sidebarlists,

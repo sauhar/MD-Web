@@ -131,7 +131,7 @@
 						<div class="widgets sidebar-widgets">
 
 							<section class="single-widget widget-categories">
-									<h6>Categories</h6>
+									<h6>{{ $menuitem->title}}</h6>
 									<ul>
                                         {{-- @foreach ($ourpages as $ourpage)
                                         

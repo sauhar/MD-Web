@@ -153,7 +153,7 @@
 						<div class="widgets sidebar-widgets">
 
 							<section class="single-widget widget-categories">
-									<h6>Categories</h6>
+									<h6>>{{ $menuitem->title}}</h6>
 									<ul>
 										{{-- @foreach ($ourpages as $ourpage) --}}
 										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
