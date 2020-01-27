@@ -11,15 +11,16 @@ use App\ContactSide;
 
 class DemoController extends Controller
 {
-     public function check($slug){
+    //  public function check($slug){
 
-       $ourpage=Ourpage::where('slug',$slug)->first();
-        if($slug=='message-from-chairman'){
-            return view('demo')->with([
-                'ourpage'=>$ourpage,
-            ]);
-        }
-    }
+    //    $ourpage=Ourpage::where('slug',$slug)->first();
+       
+    //     if($slug=='message-from-chairman'){
+    //         return view('demo')->with([
+    //             'ourpage'=>$ourpage,
+    //         ]);
+    //     }
+    // }
 
         public function check1($url){
 
@@ -30,11 +31,12 @@ class DemoController extends Controller
                 
                 return view('contact')->with([
                     'contactsides'=>$contactsides,
+                    
                     'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
                 ]); 
             }
 
-
+            $contactsides = ContactSide::first();
             $id = Ourpage::where('slug',$url)->first()->id;
             $ourpage = Ourpage::where('id',$id)->first();
             $ourpages = Ourpage::all()->take(5);
@@ -47,8 +49,11 @@ class DemoController extends Controller
 
             if($url=='message-from-executive-directors'){
                 $executives = ExecutiveDirector::all();
+                $contactsides = ContactSide::first();
                 
                 return view('about/message-from-executive-directors')->with([
+
+                    'contactsides'=>$contactsides,
                     'executives'=>$executives,
                     'ourpage'=>$ourpage,
                     'ourpages'=>$ourpages,
@@ -58,8 +63,10 @@ class DemoController extends Controller
                 ]);
             }
             if($url=='license-certificate'){
+                $contactsides = ContactSide::first();
                 $licensecertificates = LicenseCertificate::all();
                 return view('about/license-certificate')->with([
+                    'contactsides'=>$contactsides,
                     'licensecertificates'=>$licensecertificates,
                     'ourpage'=>$ourpage,
                     'ourpages'=>$ourpages,
@@ -71,8 +78,9 @@ class DemoController extends Controller
 
 
 
-             
+
                  return view('template')->with([
+                    'contactsides'=>$contactsides,
                      'menuitem'=>$menuitem,
                      'ourpage'=>$ourpage,
                     'ourpages'=>$ourpages,

@@ -132,11 +132,11 @@
                                 {{-- <a href="mailto://info@mahadmanpower.com.np">info@mahadmanpower.com.np</a> --}}
                                 {{$contactsides->email}}
                             </p>
-                            <p>
-                                {{-- <li>
+                            {{-- <p>
+                                <li>
                                 <a href="#" target=_blank>www.mahadmanpower.com.np</a>
-                            </p>
-                        </li> --}}
+                            </p> --}}
+                        </li>
                     </ul>
                 </div>
                 <!--// Single Widget -->

@@ -67,9 +67,10 @@
 
 		<!-- Footer Area -->
 		@include('include.footer')
+			
 		<!-- //Footer Area -->
 
-	</div>
+	
 	<!-- //Main wrapper -->
 
 	<!-- JS Files -->

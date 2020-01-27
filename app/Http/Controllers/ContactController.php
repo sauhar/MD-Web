@@ -8,6 +8,7 @@ use App\MenuItem;
 use App\Contact;
 use App\Ourpage;
 use Mail;
+use App\ContactSide;
 class ContactController extends Controller
 {
     public function contact()
