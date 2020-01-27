@@ -123,6 +123,11 @@
                         </li>
                         <li>
                             <p>
+                                {{$contactsides->address}}
+                            </p>
+                        </li>
+                        <li>
+                            <p>
                                 {{$contactsides->phone}}
                             </p>
                             
@@ -132,9 +137,12 @@
                                 {{-- <a href="mailto://info@mahadmanpower.com.np">info@mahadmanpower.com.np</a> --}}
                                 {{$contactsides->email}}
                             </p>
+
+                        </li>
                             {{-- <p>
                                 <li>
                                 <a href="#" target=_blank>www.mahadmanpower.com.np</a>
+                                </li>
                             </p> --}}
                         </li>
                     </ul>
