@@ -2341,7 +2341,7 @@ Widget Styels
       border-top: 1px solid #e5e5e5;
       padding-top: 15px;
       padding-bottom: 11px;
-      font-size: 12px; }
+      font-size: 11px; }
       .widgets.sidebar-widgets .widget-categories ul li:before {
         content: url(images/icons/widget-dot.png);
         padding-right: 6px; }
@@ -2351,9 +2351,9 @@ Widget Styels
       .widgets.sidebar-widgets .widget-categories ul li:last-child {
         padding-bottom: 0; }
       .widgets.sidebar-widgets .widget-categories ul li a {
-        color: #646464; }
+        color: #007bff; }
         .widgets.sidebar-widgets .widget-categories ul li a:hover {
-          color: #007bff; }
+          color: #fd7e14; }
       .widgets.sidebar-widgets .widget-categories ul li span {
         float: right; }
   .widgets.sidebar-widgets .widget-newsletter form {

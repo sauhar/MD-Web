@@ -74,7 +74,7 @@
 									<ul>
 										@foreach ($lists as $list)
 										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
-											<li><a href="/pages/{{ $list->url }}">{{$list->title}}</a></li>
+											<li><a href="/pages/{{ $list->url }}"><b>{{$list->title}}</b></a></li>
 											{{-- @endif --}}
 										@endforeach
 										{{-- <li><a href="blog-with-right-sidebar.html">Our Licence And Certificate</a></li> --}}
