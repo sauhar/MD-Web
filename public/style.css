@@ -438,8 +438,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Work Sans", sans-serif;
-  color:#212529;
+  color:#2a2c2e;
   font-weight: 400; }
+
+  
 
 img {
   max-width: 100%; }
@@ -5296,9 +5298,22 @@ Footer Styles
           background: #949494;
           position: absolute; }
   .footer--widgets .widget:not(.widget-about) ul li a {
-    color: #949494; }
+    color: #007bff; }
     .footer--widgets .widget:not(.widget-about) ul li a:hover {
-      color: #007bff; }
+      color: #fd7e14; }
+
+
+      a {
+        color: #2388ed;
+        -webkit-transition: ease color 300ms;
+        transition: ease color 300ms;
+      }
+      a:hover, a:focus {
+        color: #fd7e14;
+        text-decoration: none;
+      }      
+
+
   .footer--widgets .widget-about {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 32%;
