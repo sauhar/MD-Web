@@ -119,7 +119,7 @@
                     <h5 class="widget-title">Contact Info</h5>
                     <ul>
 
-                        {{-- <p>You can contact us any way that is convenient for you. We are available via phone or email. You can also use a quick <a href="/pages/contact">contact form</a> or visit us personally.</p> --}}
+                        <p>You can contact us any way that is convenient for you. We are available via phone or email. You can also use a quick <a href="/pages/contact">contact form</a> or visit us personally.</p>
                         {{-- <li>
                             <p>MAHAD MANPOWER PVT.LTD</p>
                         </li> --}}

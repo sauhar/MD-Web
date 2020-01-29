@@ -441,7 +441,13 @@ body {
   color:#2a2c2e;
   font-weight: 400; }
 
-  
+  .widget-contact-info p {
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    line-height: 24px;
+    color: #A2A2A2;
+  /*  letter-spacing: .7px;*/
+  }
 
 img {
   max-width: 100%; }
