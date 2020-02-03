@@ -9,15 +9,17 @@ use App\Contact;
 use App\Ourpage;
 use Mail;
 use App\ContactSide;
+use App\LogoImage;
 class ContactController extends Controller
 {
     public function contact()
     {
-           
+        $logoimage = LogoImage::first();
         $menus = menu::where('id',19)->get();
 
         return view('contact')->with([
            
+            'logoimage'=>$logoimage,
             'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
         ]);
         

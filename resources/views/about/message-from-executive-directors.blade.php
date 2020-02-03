@@ -9,7 +9,7 @@
 					<div class="container">
 						<div class="cr-breadcrumb">
 							<div class="cr-breadcrumb__left">
-								<h2>Message from executive director</h2>
+								<h2>{{ $ourpage->title }}</h2>
 								
 							</div>
 							
@@ -67,7 +67,7 @@
 											<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
 												<div class="section-title text-center">
 													{{-- <h4>OUR TEAM</h4> --}}
-													<h2>Executives Directors
+													<h2>Executive Directors
 														{{-- <span class="color--theme"> Executives Directors</span> --}}
 													</h2>
 													{{-- <p>Our Executives have a combined recruitment consultancy experience spanning over ten years in a wide variety of industry sectors.</p> --}}
@@ -153,7 +153,7 @@
 						<div class="widgets sidebar-widgets">
 
 							<section class="single-widget widget-categories">
-									<h6>>{{ $menuitem->title}}</h6>
+									<h6>{{ $menuitem->title}}</h6>
 									<ul>
 										{{-- @foreach ($ourpages as $ourpage) --}}
 										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
@@ -163,7 +163,7 @@
 
 										@foreach ($lists as $list)
 										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
-											<li><a href="/pages/{{ $list->url }}">{{$list->title}}</a></li>
+											<li><a href="/pages/{{ $list->url }}"><b>{{$list->title}}</b></a></li>
 											{{-- @endif --}}
 										@endforeach
 

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\MenuItem;
 use App\Menu;
 use App\ContactSide;
-
+use App\LogoImage;
 class HomeController extends Controller
 {
     /**
@@ -33,12 +33,16 @@ class HomeController extends Controller
     // }
     public function wlcome(){
         $contactsides = ContactSide::first();
+        $footerimage = LogoImage::where('name','footer')->first();
+        $logoimage = LogoImage::first();
         $menus = MenuItem::where('menu_id',2)->orderBy('order')->get();
         // $menu_items = menu_item::where('menu_id',2)->orderBy('order')->get();
 
         return view('welcome')->with([
             'contactsides'=>$contactsides,
             'menus'=>$menus,
+            'logoimage'=>$logoimage,
+            'footerlogo' =>$footerimage,
             
             // 'menu_items'=>$menu_items
         ]);;

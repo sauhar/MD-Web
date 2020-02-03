@@ -45,7 +45,7 @@
 					<div class="header__bottom__inner">
 						<div class="header__logo">
 							<a href="/">
-								<img id="headerone" src="/images/logo/logo-theme.png" alt="header logo"  style="width: 200px;">
+								<img id="headerone" src="{{ Voyager::image($logoimage->image)}}" alt="header logo"  style="width: 200px;">
 							</a>
 						</div>
 

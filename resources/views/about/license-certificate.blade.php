@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-<title>{{$ourpage->title}}</title>
+<title>{{ $ourpage->title }}</title>
 @endsection
 
 @section('breadcump')
@@ -9,7 +9,7 @@
 					<div class="container">
 						<div class="cr-breadcrumb">
 							<div class="cr-breadcrumb__left">
-								<h2>Licence and certificate</h2>
+								<h2>{{ $ourpage->title }}</h2>
 								
 							</div>
 							
@@ -140,7 +140,7 @@
                                         
                                         @foreach ($lists as $list)
 										{{-- @if($ourpage->id==1 || $ourpage->id==2 ||$ourpage->id==3 || $ourpage->id==4 || $ourpage->id==5 || $ourpage->id==6) --}}
-											<li><a href="/pages/{{ $list->url }}">{{$list->title}}</a></li>
+											<li><a href="/pages/{{ $list->url }}"><b>{{$list->title}}</b></a></li>
 											{{-- @endif --}}
 										@endforeach
 

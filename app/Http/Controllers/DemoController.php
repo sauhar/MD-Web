@@ -8,7 +8,7 @@ use App\MenuItem;
 use App\ExecutiveDirector;
 use App\LicenseCertificate;
 use App\ContactSide;
-
+use App\LogoImage;
 class DemoController extends Controller
 {
     //  public function check($slug){
@@ -28,13 +28,21 @@ class DemoController extends Controller
             if($url=='contact'){
               
                 $contactsides = ContactSide::first();
-                
+                $footer = 'footer';
+                $footerimage = LogoImage::where('name','footer')->first(); 
+                $logoimage = LogoImage::first();
+
                 return view('contact')->with([
                     'contactsides'=>$contactsides,
-                    
+                    'logoimage'=>$logoimage,
+                    'footerlogo' =>$footerimage,
                     'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
                 ]); 
             }
+
+
+            $footerimage = LogoImage::where('name','footer')->first();
+            $logoimage = LogoImage::first();
 
             $contactsides = ContactSide::first();
             $id = Ourpage::where('slug',$url)->first()->id;
@@ -50,6 +58,7 @@ class DemoController extends Controller
             if($url=='message-from-executive-directors'){
                 $executives = ExecutiveDirector::all();
                 $contactsides = ContactSide::first();
+                // $logoimage = LogoImage::first();
                 
                 return view('about/message-from-executive-directors')->with([
 
@@ -58,20 +67,27 @@ class DemoController extends Controller
                     'ourpage'=>$ourpage,
                     'ourpages'=>$ourpages,
                     'menuitem'=>$menuitem,
-                    
+                    'logoimage'=>$logoimage,
+                    'footerlogo' =>$footerimage,
+
                     'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
-                    'lists'=>$sidebarlists,
+                    'lists'=>$sidebarlists, 
                 ]);
             }
             if($url=='license-certificate'){
-                $contactsides = ContactSide::first();
+                // $contactsides = ContactSide::first();
                 $licensecertificates = LicenseCertificate::all();
+                $footerimage = LogoImage::where('name','footer')->first();
+                $logoimage = LogoImage::first();
                 return view('about/license-certificate')->with([
                     'contactsides'=>$contactsides,
                     'licensecertificates'=>$licensecertificates,
                     'ourpage'=>$ourpage,
                     'ourpages'=>$ourpages,
                     'menuitem'=>$menuitem,
+                    'logoimage'=>$logoimage,
+                    'footerlogo' =>$footerimage,
+
                     
                     'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
                     'lists'=>$sidebarlists,
@@ -86,6 +102,8 @@ class DemoController extends Controller
                      'menuitem'=>$menuitem,
                      'ourpage'=>$ourpage,
                     'ourpages'=>$ourpages,
+                    'logoimage'=>$logoimage,
+                    'footerlogo' =>$footerimage,
                     'menus'=>\App\MenuItem::where('menu_id',2)->orderby('order')->get(),
                     'lists'=>$sidebarlists,
 

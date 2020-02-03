@@ -10,7 +10,7 @@
                 <div class="widget widget-about">
                     <div class="footer-area__logo">
                         <a href="/">
-                            <img src="/images/logo/logo-theme1.png" alt="footer logo">
+                            <img src="{{ Voyager::image($footerlogo->image)}}" alt="footer logo">
                         </a>
                     </div>
 
@@ -119,26 +119,26 @@
                     <h5 class="widget-title">Contact Info</h5>
                     <ul>
 
-                        <p>You can contact us any way that is convenient for you. We are available via phone or email. You can also use a quick <a href="/pages/contact">contact form</a> or visit us personally.</p>
+                        {{-- <p>You can contact us any way that is convenient for you. We are available via phone or email. You can also use a quick <a href="/pages/contact">contact form</a> or visit us personally.</p> --}}
                         {{-- <li>
                             <p>MAHAD MANPOWER PVT.LTD</p>
                         </li> --}}
                         <li>
-                            <p>
+                           
                                 {{$contactsides->address}}
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                {{$contactsides->phone}}
-                            </p>
                             
                         </li>
                         <li>
-                            <p>
+                            
+                                {{$contactsides->phone}}
+                            
+                            
+                        </li>
+                        <li>
+                            
                                 {{-- <a href="mailto://info@mahadmanpower.com.np">info@mahadmanpower.com.np</a> --}}
                                 {{$contactsides->email}}
-                            </p>
+                            
 
                         </li>
                             {{-- <p>
