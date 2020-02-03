@@ -45,7 +45,7 @@ class HomeController extends Controller
             'footerlogo' =>$footerimage,
             
             // 'menu_items'=>$menu_items
-        ]);;
+        ]);
     }
    
 }
