@@ -8,7 +8,7 @@ use App\MenuItem;
 use App\Contact;
 use App\Ourpage;
 use Mail;
-use App\ContactSide;
+use App\Contactside;
 use App\LogoImage;
 class ContactController extends Controller
 {

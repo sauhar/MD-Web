@@ -7,7 +7,7 @@ use App\Ourpage;
 use App\MenuItem;
 use App\ExecutiveDirector;
 use App\LicenseCertificate;
-use App\ContactSide;
+use App\Contactside;
 use App\LogoImage;
 class DemoController extends Controller
 {
@@ -27,7 +27,7 @@ class DemoController extends Controller
 
             if($url=='contact'){
               
-                $contactsides = ContactSide::first();
+                $contactsides = Contactside::first();
                 $footer = 'footer';
                 $footerimage = LogoImage::where('name','footer')->first(); 
                 $logoimage = LogoImage::first();
@@ -44,7 +44,7 @@ class DemoController extends Controller
             $footerimage = LogoImage::where('name','footer')->first();
             $logoimage = LogoImage::first();
 
-            $contactsides = ContactSide::first();
+            $contactsides = Contactside::first();
             $id = Ourpage::where('slug',$url)->first()->id;
             $ourpage = Ourpage::where('id',$id)->first();
             $ourpages = Ourpage::all()->take(5);
@@ -57,7 +57,7 @@ class DemoController extends Controller
 
             if($url=='message-from-executive-directors'){
                 $executives = ExecutiveDirector::all();
-                $contactsides = ContactSide::first();
+                $contactsides = Contactside::first();
                 // $logoimage = LogoImage::first();
                 
                 return view('about/message-from-executive-directors')->with([
@@ -75,7 +75,7 @@ class DemoController extends Controller
                 ]);
             }
             if($url=='license-certificate'){
-                // $contactsides = ContactSide::first();
+                // $contactsides = Contactside::first();
                 $licensecertificates = LicenseCertificate::all();
                 $footerimage = LogoImage::where('name','footer')->first();
                 $logoimage = LogoImage::first();
