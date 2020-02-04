@@ -51,7 +51,7 @@ class DemoController extends Controller
             
    
            $parentid = MenuItem::where('url',$url)->first()->parent_id;
-           $sidebarlists = MenuItem::where('parent_id',$parentid)->get();
+           $sidebarlists = MenuItem::where('parent_id',$parentid)->orderby('order')->get();
 
             $menuitem=MenuItem::where('id',$parentid)->first();
 
