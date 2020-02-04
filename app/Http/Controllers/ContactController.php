@@ -41,7 +41,7 @@ class ContactController extends Controller
         Mail::send('email', $data , function($message) use ($data)
        {
            $message->from($data['form_email'],$data['name']);
-           $message->to('info@mahadmanpower.com.np', 'Mahad Manpower')->subject('Mahad Site Contact Form');
+           $message->to('info@mahadmanpower.com.np', 'Mahad Manpower')->subject('Mahad Contact Form');
        });
         return redirect()->back()->with('success', 'Thank you for contacting us!'); 
        }
