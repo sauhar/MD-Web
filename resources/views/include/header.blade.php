@@ -46,6 +46,7 @@
 						<div class="header__logo">
 							<a href="/">
 								<img id="headerone" src="{{ Voyager::image($logoimage->image)}}" alt="header logo"  style="width: 200px;">
+								{{-- <img id="headerone" src="{{ Voyager::image(setting('site.logo'))}}" alt="header logo"  style="width: 200px;"> --}}
 							</a>
 						</div>
 

@@ -11,6 +11,7 @@
 		
 		<!-- About Area -->
 		<section id="about-area" class="cr-section about-area bg--white section-padding--xlg">
+			
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6">
