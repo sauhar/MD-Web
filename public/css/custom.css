@@ -1,0 +1,33 @@
+/*********************************************************************************
+
+    Template Name: Fsulting - Financial Consulting Bootstrap 4 Template
+	Description: Fsulting is a beautiful and unique financial & consulting html template which comes with bootstrap 4 framework.
+	Version: 1
+
+	Note: This is custom css. All custom styles (user styles) declare here.
+
+**********************************************************************************/
+
+
+.core-value-title{
+	color: yellow;
+    font-weight: 700;
+}
+
+.mobile-logo img{
+
+	max-width: 50%;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+	.footer-area__logo img{
+		max-width: 50%;
+	}
+}
+
+/* .active a{
+	color:blue !important;
+} */
+
